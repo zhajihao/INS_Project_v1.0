@@ -1,0 +1,25 @@
+# ---- Keil MDK 构建产物 (编译生成, 不纳入版本管理) ----
+project/Objects/
+project/Listings/
+project/build/
+
+# 编译中间文件 / 链接输出 (ARMCC V5 + Keil 链接器)
+*.o
+*.d
+*.crf
+*.axf
+*.dep
+*.lnp
+*.hex
+*.bin
+
+# Keil 用户界面布局与调试器临时文件
+*.uvguix.*
+project/EventRecorderStub.scvd
+project/JLinkLog.txt
+
+# 构建与调试日志
+project/build.log
+project/build_log.txt
+project/debug.log
+*.log
