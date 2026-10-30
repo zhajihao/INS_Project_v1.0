@@ -4,7 +4,7 @@
  *
  * 职责:
  *   - USART0 230400 8E1 + DMA1_CH2 循环模式接收
- *   - T_HJD_POSDATA 帧解析 (同步字 0x55 0xBB + 51B + XOR 校验)
+ *   - T_HJD_POSDATA 帧解析 (同步字 0x55 0xBB + 51B + 累加和低 8 位校验)
  *   - 环形缓冲 + 状态机逐字节对齐
  *
  * 协议细节: 同步字/帧长/校验见下方 GNSS_HJD_* 常量, 字段偏移见 gnss1_rx.c 的 parse_frame.
@@ -35,7 +35,7 @@ extern "C"
 /** 整帧总长 (含同步字) */
 #define GNSS_HJD_TOTAL_LEN 51U
 
-/** 校验和累加范围字节数 (索引 0 起至校验字节前, 不含 u8Xor) */
+/** 校验和累加范围字节数 (索引 0 起至校验字节前, 不含末尾校验字节) */
 #define GNSS_HJD_CHECKSUM_LEN (GNSS_HJD_TOTAL_LEN - 1U)
 
 /** 环缓冲溢出时刻快照条数 (环形记录, 最新覆盖最旧) */

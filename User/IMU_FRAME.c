@@ -86,8 +86,10 @@ static uint16_t nav_frame_counter;
 /**
  * @brief  打包并发送一帧组合导航结果
  *
- * 打包规则与 imu_send_frame 一致:
- *   帧头 0x55 0xAA | type 0x81 | uint16 cnt | att[3]/vn[3]/pos[3] (float)
+ * 帧头/帧尾与 imu_send_frame 一致, 差异:
+ *   - 无 data_length 字段, 第 3 字节改为 frame_type (0x81)
+ *   - checksum 只覆盖 frame_type ~ pos[2] (39 字节), 不含帧头
+ *   帧格式: 帧头 0x55 0xAA | type 0x81 | uint16 cnt | att[3]/vn[3]/pos[3] (float)
  *   | checksum (type ~ pos[2] 累加和) | 帧尾 0x0D 0x0A
  */
 void nav_send_frame(const double att_rad[3], const double vn_mps[3], const double pos[3])
@@ -104,10 +106,11 @@ void nav_send_frame(const double att_rad[3], const double vn_mps[3], const doubl
         nav_frame.pos[i] = (float)pos[i];
     }
 
-    /* checksum: 从 frame_type 到 pos[2] */
+    /* checksum: 从 frame_type 到 pos[2], 共 39 字节
+       (offsetof(checksum) - offsetof(frame_type) = 41 - 2) */
     nav_frame.checksum = imu_checksum(
         (uint8_t *)&nav_frame.frame_type,
-        sizeof(nav_frame) - offsetof(Nav_Frame_t, checksum) - 2 /* 减 end1/end2 */);
+        offsetof(Nav_Frame_t, checksum) - offsetof(Nav_Frame_t, frame_type));
     nav_frame.end1 = 0x0DU;
     nav_frame.end2 = 0x0AU;
 

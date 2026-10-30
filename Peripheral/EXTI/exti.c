@@ -10,17 +10,19 @@
 #include "systick.h"
 #include "exti.h"
 
-/** @brief ADXL359 DRDY 中断标志（EXTI12 上拉沿触发后置 1） */
+/** @brief ADXL357/359 DRDY 中断标志（EXTI12 上升沿触发后置 1, 名称沿用历史） */
 uint8_t ADXL359_DRDY_FLAG = 0;
 
 /**
  * @brief  外部中断初始化
  *
  * 中断源配置:
- *   - PC12 → EXTI_12  上升沿触发 (ADXL359 DRDY)
+ *   - PC12 → EXTI_12  上升沿触发 (ADXL357 DRDY)
  *   - PD2  → EXTI_2   上升沿触发 (预留)
  *
  * 中断优先级: 抢占 3，子优先级 0。
+ *
+ * @note 本固件当前未调用本函数: 采样由 TIMER3 5ms 节拍驱动, 此处为预留通路。
  */
 void Exti_Init(void)
 {
@@ -55,7 +57,7 @@ void Exti_Init(void)
 /**
  * @brief  EXTI10~15 中断服务函数（PC12 = EXTI12）
  *
- * 检测 PC12 为高电平时置位 ADXL359_DRDY_FLAG。
+ * 检测 PC12 为高电平时置位 ADXL359_DRDY_FLAG (标志名沿用历史, 本板为 ADXL357)。
  * 读完后立即清 EXTI 标志防止同一沿再次进入中断。
  */
 void EXTI10_15_IRQHandler(void)

@@ -8,8 +8,8 @@
  * 本文件只保留版本宏, 不再重复记录历史。 */
 #define FW_VERSION_MAJOR 1
 #define FW_VERSION_MINOR 5
-#define FW_VERSION_PATCH 0
-#define FW_VERSION_STR "IMU+NAV v1.5.0"
+#define FW_VERSION_PATCH 1
+#define FW_VERSION_STR "IMU+NAV v1.5.1"
 
 /* 编译时间由编译器自动填入。 */
 #define FW_BUILD_DATE __DATE__

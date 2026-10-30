@@ -52,7 +52,11 @@ void navi_init(struct Imu_Infor *imu,
 	(*imu).nts = 0.01;
 	(*imu).ts = 0.005;
 
-	/* 温度补偿测试场景:陀螺与加表标度因数置 1(等价于不补偿) */
+	/* 温度补偿测试场景: 写入 6 个标度因数占位值(等价于不补偿).
+	   注: 按 ErrorComp 打包布局, [0]/[1]/[2] 并非陀螺 dEg 对角([0,4,8] 才是),
+	   [12..14] 实为陀螺零偏 eb; 且此处写入的初值会被 navi_pipeline_init()
+	   的 memset(&g_imu.para_calerr) 清零, 再按 [9..11]=陀螺 E1g / [24..26]=加表 K1a
+	   重新装订, 故实际生效的是流水线里那组. */
 	(*imu).para_calerr[0] = 1.0;
 	(*imu).para_calerr[1] = 1.0;
 	(*imu).para_calerr[2] = 1.0;
@@ -60,7 +64,9 @@ void navi_init(struct Imu_Infor *imu,
 	(*imu).para_calerr[13] = 1.0;
 	(*imu).para_calerr[14] = 1.0;
 
-	/* 对准时间: 300s (粗对准时长, coarsealign_inertialRT 内部以此为累计终点) */
+	/* 对准时间: 30s (粗对准时长). 本工程粗对准终点由 navi_pipeline 判定
+	   (calign_frame_count >= t_align * fs, 见 navi_pipeline.c),
+	   CoarseAlign_Horizon_RT 本身不接收 sys 结构体. */
 	(*sys).t_align = 30.0;
 
 	/* 计算地球参数 */

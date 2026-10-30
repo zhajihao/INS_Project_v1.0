@@ -18,15 +18,15 @@
 - 仅删除注释，不动任何代码、宏值、声明顺序、`const`/`__restrict` 关键字
 - 编译产物尺寸应与当前基线完全一致（注释不进代码段）
 
-## 涉及文件清单（30 个，按目录分组）
+## 涉及文件清单（39 个，按目录分组）
 
 ### A. User/ (11 个)
 | 文件 | 函数声明注释数 | 类型 |
 |---|---|---|
-| User/navi_bridge.h | 6 | Doxygen 块 |
+| User/navi_pipeline.h | 6 | Doxygen 块 |
 | User/version.h | 4 | Doxygen 块 |
 | User/mmc5983ma.h | 11 | Doxygen 块 |
-| User/gnss_hjd.h | 5 | Doxygen 块 |
+| User/gnss1_rx.h | 5 | Doxygen 块 |
 | User/IMU_FRAME.h | 2 | Doxygen 块 |
 | User/XV7021.h | 14 | Doxygen 块 |
 | User/ADXL357.h | 5 | Doxygen 块 |
@@ -103,8 +103,9 @@
 2. Keil 全量 rebuild：`& "D:\Keil_v5\UV4\UV4.exe" -r "project\template.uvprojx" -j0 -o "build_log.txt"`
 3. 检查日志末尾：0 Error(s), 0 Warning(s)
 4. Code/RO/RW/ZI 尺寸应与基线 39,272 / 1,088 / 252 / 58,212 完全一致
+   （此为 v1.3.0 执行时点值；v1.5.1 当前基线为 38,256 / 1,088 / 180 / 42,012）
 
 ## 不在本次范围
 - Library/CMSIS/.cmsis 等第三方库头文件不动
 - 源文件 (.c) 中函数定义处的注释保留不动
-- readme.md、版本日志等文档不动
+- README.md、版本日志等文档不动

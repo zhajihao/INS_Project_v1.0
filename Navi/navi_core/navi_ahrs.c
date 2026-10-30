@@ -31,7 +31,9 @@ void AHRS(struct Imu_Infor *p_imu_infor, struct AHRS_Infor *p_AHRS_Infor)
  * @param  p_imu_infor   IMU信息
  * @param  p_AHRS_Infor  AHRS信息:输入mod_accdata/mod_gyrodata、cnb_align、average_accdata,有效时输出Flag_ValidHorAlign=1
  * @retval void
- * @note   判据:平均陀螺模值<0.04°(静止flag_rot=0)、比力模值接近9.8(|差|<0.5 m/s^2)、水平分量mod_fH<0.2 m/s^2;Flag_HorAlignFinish=0时直接返回
+ * @note   判据:平均陀螺模值<0.04°(静止flag_rot=0)、比力模值接近9.8、水平分量mod_fH<0.2 m/s^2;Flag_HorAlignFinish=0时直接返回
+ *         注意: 比力模值判据当前写为 fabs((mod_accdata - 9.8) < 0.5), 括号位置使 fabs 作用于关系运算结果,
+ *         该条件恒为 1, 实际只剩 陀螺静止 + 水平分量 两项生效 (本模块当前未被调用, 保留原样待修正)
  */
 void Valid_HorizonAlign(struct Imu_Infor *p_imu_infor, struct AHRS_Infor *p_AHRS_Infor)
 

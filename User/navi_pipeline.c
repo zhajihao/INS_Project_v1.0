@@ -8,7 +8,7 @@
  *
  * GNSS 数据填充:
  *   gnss_info.vn1/pos1/flag_GNSS1valid   ← GNSS1 (USART0 真机接收)
- *   gnss_info.vn2/pos2/flag_GNSS2valid   ← GNSS2 (stub, 航向45°, PDOP1.5)
+ *   gnss_info.vn2/pos2/flag_GNSS2valid   ← GNSS2 (stub, 固定位置, PDOP1.5, 无航向)
  *   gnss_info.GNSStype = 0x0C            ← bit0x08=RTK GNSS1, bit0x04=RTK GNSS2
  */
 
@@ -88,7 +88,7 @@ static const struct
  *
  * 流水线 7 步:
  *   0. GNSS 数据填充     GNSS1=真机 gnss1_rx (若有新帧则覆盖 vn1/pos1/flag),
- *                        GNSS2=stub (固定位置 34.2°N/108.8°E/400m, heading=45°)
+ *                        GNSS2=stub (固定位置 34.2°N/108.8°E/400m, 无航向字段)
  *   1. IMU 原始量解包    accel → acc_ori = accel * ts, gyro → gyro_ori = gyro(dps) * arcdeg * ts
  *   2. 温补级            GetErrorPara_TC: T_gyro[0..2] / T_acc[0..2] → errpara_TC
  *   3. ErrorComp ×2      温补级 errpara_TC → 标定级 para_calerr → data_gyro / data_acc
@@ -181,7 +181,7 @@ static void imu_frame_process_all(
         calign_started = 1;
     }
 
-    /* 步骤2: 执行水平粗对准 + GNSS heading 装航向 */
+    /* 步骤2: 执行水平粗对准 + 固定航向装订 (GNSS1_DEFAULT_HEADING_DEG) */
     if (calign_started && (g_ahrs.Flag_HorAlignFinish == 0))
     {
         CoarseAlign_Horizon_RT(&g_imu, &g_ahrs);
@@ -370,7 +370,9 @@ void navi_pipeline_feed_imu(const float accel_mps2[3], const float gyro_radps[3]
  * @retval 1 本次跑了 Kalman (有新导航结果输出)
  * @retval 0 没跑 (flag_navsuc==0)
  * @note   调用时机: 在 feed_imu 之后、主循环外层同层级 (不在 sample_due 分支内).
- *         nav_send_frame 应在 run_kalman 返回 1 后执行, 保证拿到融合后的 pos/vn/att.
+ *         main.c 按 navi_push_div >= 10U 节流上报: 本函数返回 1 后
+ *         navi_pipeline_get_state + nav_send_frame 才取融合后的 pos/vn/att
+ *         (返回值本身在上报分支中不使用).
  */
 uint8_t navi_pipeline_run_kalman(void)
 {

@@ -174,7 +174,7 @@ void Kalman15d_MesUpdate(struct Kalman15d_SSMat *p_Kalman15d_SSMat, struct GNSS_
 			mat_multi_f(Kk_GA[0], Hk_GA[0], mat_temp17[0], 15, 7, 15);										   // mat_temp17=Kk_GA*Hk_GA
 			mat_unit_f(mat_temp18[0], 15);																	   // mat_temp18=eye(15)
 			mat_minus_f(mat_temp18[0], mat_temp17[0], mat_temp19[0], 15, 15);								   // mat_temp19=eye(15)-Kk_GA*Hk_GA
-			mat_multi_f(mat_temp19[0], (*p_Kalman15d_SSMat).Pkk_1[0], (*p_Kalman15d_SSMat).Pk[0], 15, 15, 15); // Pk=(eye(15)-Kk_GNSS*Hk_GNSS)*Pkk_1;
+			mat_multi_f(mat_temp19[0], (*p_Kalman15d_SSMat).Pkk_1[0], (*p_Kalman15d_SSMat).Pk[0], 15, 15, 15); // Pk=(eye(15)-Kk_GA*Hk_GA)*Pkk_1;
 		}
 		/* 置位量测更新有效*/
 		(*p_sys_infor).flag_KalmanSuc = 1;

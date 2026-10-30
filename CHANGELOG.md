@@ -17,7 +17,8 @@
 
 | 版本             | 日期               | 主题                                             |
 | ---------------- | ------------------ | ------------------------------------------------ |
-| **v1.5.0** | 2026-10-30         | 健壮性与可观测性收尾                             |
+| **v1.5.1** | 2026-10-30         | Nav 结果帧校验和范围修复 + 全工程注释校对         |
+| v1.5.0           | 2026-10-30         | 健壮性与可观测性收尾                             |
 | v1.4.0           | 2026-10-28         | 清理全工程打点代码，合并导航算法最终优化成果     |
 | v1.3.0           | 2026-10-27         | Kalman 矩阵内层优化 + 优化等级升到 Level 3 (-O3) |
 | v1.2.0           | 2026-10-27         | USART0 改为 GNSS1 真机接收口，Kalman float32 化  |
@@ -26,6 +27,41 @@
 | v1.0.6           | 2026-09-23         | UART0 接收 + 版本查询协议                        |
 | v1.0.5           | 2026-09-23         | SPI/串口 DMA 化，5ms 采样节拍确立                |
 | 初始搭建         | 2026-09-14 ~ 09-22 | 外部晶振、轴映射、地磁驱动                       |
+
+---
+
+## [v1.5.1] - 2026-10-30 — Nav 结果帧校验和范围修复 + 全工程注释校对
+
+> `User/version.h` 已同步为 `1.5.1`（`FW_VERSION_PATCH=1`）；打标签用 `git tag -a v1.5.1 -m "..."`。
+
+### 协议修复（行为变更）
+
+- **`nav_send_frame` 校验和覆盖范围修正**：原式 `sizeof(nav_frame) - offsetof(checksum) - 2` 恒为 1（44 − 41 − 2），
+  实际只累加 `frame_type` 一个字节，`checksum` 恒等于 `0x81`。改为
+  `offsetof(Nav_Frame_t, checksum) - offsetof(Nav_Frame_t, frame_type)` = **39 字节**（`frame_type` → `pos[2]`），
+  与 `IMU_FRAME.h` 的协议注释一致；用 `offsetof` 相减而非写死常数，后续结构体增删字段时范围自动跟随。
+- 影响：上行导航帧（`0x55 0xAA 0x81 …`，44 B）的 `checksum` 字段取值改变。按旧「1 字节」实现的上位机需同步改成
+  「`frame_type` 起 39 字节累加和低 8 位」，否则解析校验失败。
+
+### 注释与文档校对
+
+- 修正 20 个源文件中注释与代码不符之处，主要包括：`gnss1_rx` 校验算法（XOR → 累加和低 8 位）与状态机枚举
+  `SYM1/SYM2` 对调、2048B 环缓冲覆盖窗口 87.2 → **97.8ms**、`navi_api` 对准时长 300s → **30s** 及 `para_calerr`
+  下标含义（并被 `navi_pipeline_init` 的 `memset` 覆写）、`Kalman15d_MeaUpdate` 双天线 GA 分支
+  `Kk_GA*Hk_GA`（原误写 `Kk_GNSS*Hk_GNSS`）、`IMU_FRAME.h` 帧长 52/47 与「IMU 帧 0x56」、
+  `exti.c` ADXL359 → **ADXL357**（且注明当前未接入）、`navi_types.h` 中 7d/12d 状态构成、
+  `navi_leverarm` 的 `dpGL` 实为 `-Mpv*r_outlearm`、粗对准完成判定归 `navi_pipeline` 等。
+- `IMU_FRAME.h/.c` 导航帧说明补齐「无 `data_length` 字段、校验不含帧头、共 39 字节」。
+- 历史文档（`.spec/`、`.trae/documents/`、`RELEASE_NOTES_v1.3.0.md`）中的旧文件名/API 名同步为
+  `navi_pipeline` / `gnss1_rx`；`CHANGELOG` 本文件的两处更名对照表按约定保留旧名。
+
+### 编译尺寸 (ARMCC V5 -O3 -Otime)
+
+```
+Code 38,232 → 38,256 B (+24, 校验循环由 1 字节扩为 39 字节)
+RO 1,088 B / RW 180 B / ZI 42,012 B (均不变)
+0 Error 0 Warning
+```
 
 ---
 
@@ -59,7 +95,7 @@
 | `User/gnss_hjd.c/.h`    | `User/gnss1_rx.c/.h`      | 驱动+协议解析；结果类型 `gnss_hjd_result_t` → `gnss1_rx_result_t`，API `gnss_hjd_get_result` → `gnss1_rx_get_result`                                                                       |
 | `User/navi_bridge.c/.h` | `User/navi_pipeline.c/.h` | 导航处理链封装；API `navi_bridge_feed_imu` / `navi_bridge_try_run_kalman` / `navi_bridge_get_state` → `navi_pipeline_feed_imu` / `navi_pipeline_run_kalman` / `navi_pipeline_get_state` |
 
-- GNSS RX 环缓冲 1024 → **2048 字节**（覆盖窗口 48.9ms → **87.2ms**，约 40 帧）。
+- GNSS RX 环缓冲 1024 → **2048 字节**（覆盖窗口 48.9ms → **97.8ms**，约 40 帧）。
 - 删除宽泛的死接口 `gnss1_rx_has_data()`。
 
 ### 编译尺寸 (ARMCC V5 -O3 -Otime)

@@ -6,7 +6,7 @@
  * @brief 滤波器参数 (Kalman 初始标准差 / PDOP 阈值 / 杆臂等)
  *
  * 本文件包含各滤波器共享的参数宏, 与 navi_constants.h (物理/数学常量) 互补.
- * 源自旧框架 constants.h, 为避免与 navi_constants.h 的 21 个重复宏定义冲突,
+ * 源自旧框架 constants.h, 为避免与 navi_constants.h 的 20 个重复宏定义冲突,
  * 已剥离到 navi_config/ 下单独管理.
  *
  * 各滤波器源码统一 include 本文件而非旧 constants.h:

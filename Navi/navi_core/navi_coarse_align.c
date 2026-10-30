@@ -329,8 +329,8 @@ void coarsealign_inertialRT(struct Imu_Infor *p_imu_infor, struct Ethi *p_ethi, 
  * @note   以归一化比力作为矩阵第3行(天向),选近正交的水平分量构造第2、1行;
  *         仅水平姿态(pitch/roll)可观测,航向不可观(平均陀螺仅存入average_gyrodata,不参与姿态解算);
  *         内部无完成判定,累加器sum_*与kk为static且无复位接口(重复对准会续算,重启需扩展复位接口);
- *         完成判定/结果拷贝由外部状态机(main.c)处理;
- *         末行强制写全局g_ahrs.flag_EnvFactor=1属调试占位,使main.c步骤3环境因子门控恒通过
+ *         完成判定/结果拷贝由外部状态机处理 (navi_pipeline.c 的 imu_frame_process_all 步骤5);
+ *         末行强制写全局g_ahrs.flag_EnvFactor=1属调试占位,使 navi_pipeline.c 步骤3环境因子门控恒通过
  */
 void CoarseAlign_Horizon_RT(struct Imu_Infor *p_imu_infor, struct AHRS_Infor *p_AHRS_Infor)
 {

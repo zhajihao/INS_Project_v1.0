@@ -103,7 +103,7 @@ pdop 1.47 / pos_valid=1，收发帧计数一致）。
 | 问题 | 现象 | 静态分析结论 |
 | --- | --- | --- |
 | 静止时 `vn` 缓慢增长 | 已观测（-O2/-O3 均存在） | `Kalman_Feedback` 仅反馈 `xk[3..8]`（速度/位置），失准角与零偏不回馈；姿态矩阵航向误差经重力投影持续注入水平速度 |
-| 姿态角输出不刷新 | 已确认 | `navi_bridge_get_state()` 取 `g_imu.att[]`，而 `att` 只在粗对准完成时写一次；INS 递推更新的是 `cnb`。修复方向：`m2att(cnb, att)` 反解或 Feedback 修正 `cnb` 后同步刷新 |
+| 姿态角输出不刷新 | 已确认 | `navi_pipeline_get_state()` 取 `g_imu.att[]`，而 `att` 只在粗对准完成时写一次；INS 递推更新的是 `cnb`。修复方向：`m2att(cnb, att)` 反解或 Feedback 修正 `cnb` 后同步刷新 |
 | `xv7021_sample_due` 未加 `volatile` | 未触发（理论风险） | 普通 `uint8_t` 被 ISR 写、主循环读；`-O3` 理论上可将读取提到循环外导致采样冻结，实测因跨编译单元 + 主循环调用大量外部函数而未触发。建议后续加 `volatile` 加固 |
 
 ---

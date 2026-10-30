@@ -1,5 +1,10 @@
 # 组合导航算法迁移 IMU_Project 实施计划
 
+> 注: 本文为 v1.1.0 移植阶段的实施计划。文中桥接层文件名/API 已按 v1.5.0 更名同步
+> （`navi_bridge.c/h` → `navi_pipeline.c/h`，`navi_bridge_xxx` → `navi_pipeline_xxx`），
+> 其余内容保持当时状态。另: 步骤 6 中 `version_protocol_poll()` 已于 v1.2.0 随版本查询协议一并移除
+> （见 CHANGELOG v1.2.0），该条不再适用。
+
 ## Repository Research
 
 ### 当前 IMU_Project 现状
@@ -85,7 +90,7 @@
 
 | 文件 | 职责 |
 |---|---|
-| `User/navi_bridge.c/h` | (1) 将当前 IMU 采样 (dps, m/s²) 转换为 navi 要求的 gyro_ori (rad/帧) 和 acc_ori (m/s·帧) (2) 累积 4 个子样后触发 navi_run_one_frame (3) 提供导航输出 (att/vn/pos) 到 UART 发送的接口 |
+| `User/navi_pipeline.c/h` | (1) 将当前 IMU 采样 (dps, m/s²) 转换为 navi 要求的 gyro_ori (rad/帧) 和 acc_ori (m/s·帧) (2) 累积 4 个子样后触发 navi_run_one_frame (3) 提供导航输出 (att/vn/pos) 到 UART 发送的接口 |
 
 ## Implementation Steps
 
@@ -104,17 +109,17 @@
 4. **扩展 startup 栈配置**
    - startup_gd32f405.s 中 Stack_Size 从 0x400 改 0x2000 (8KB, 深矩阵运算调用链需要)
 
-5. **创建 navi_bridge 转换层** (User/navi_bridge.c/h)
-   - 对外 API: `navi_bridge_init()`, `navi_bridge_feed_imu(accel_mps2[3], gyro_radps[3])`, `navi_bridge_get_state(att, vn, pos)`
+5. **创建 navi_pipeline 转换层** (User/navi_pipeline.c/h)
+   - 对外 API: `navi_pipeline_init()`, `navi_pipeline_feed_imu(accel_mps2[3], gyro_radps[3])`, `navi_pipeline_get_state(att, vn, pos)`
    - 内部: 维护 Imu_Infor/Ethi/Sys_Infor/Kalman7d_State/Kalman19d_State 等所有导航状态结构体 (static 全局)
    - 内部: 维护 4 帧 IMU 子样缓存 `imu_subsample_buf[4][3]` (gyro) 和 `imu_subsample_buf_acc[4][3]` (acc)
    - 内部: 当 4 帧子样填满时, 累加得到 `gyro_ori[3] = Σ gyro_buf[i]` (rad/帧), `acc_ori[3] = Σ acc_buf[i] × ts` (m/s·帧), 然后调用 navi_run_one_frame
    - GNSS stub: 初始化时写入模拟 GNSS 观测值 `sys->vn_GNSS[0]=0, pos_GNSS[lat, lon, h]`
 
 6. **改造 main.c**
-   - 初始化段: `navi_bridge_init()` (在传感器初始化之后, 主循环之前)
-   - 主循环: 每 5ms 采样后, 调用 `navi_bridge_feed_imu(accel_mps2, gyro_radps)` —— 由 bridge 内部管理累积和触发时机
-   - 移除原有的直接 `imu_send_frame()` 调用 (改为从 navi_bridge 读导航状态打包发送)
+   - 初始化段: `navi_pipeline_init()` (在传感器初始化之后, 主循环之前)
+   - 主循环: 每 5ms 采样后, 调用 `navi_pipeline_feed_imu(accel_mps2, gyro_radps)` —— 由 pipeline 内部管理累积和触发时机
+   - 移除原有的直接 `imu_send_frame()` 调用 (改为从 navi_pipeline 读导航状态打包发送)
    - 保留 version_protocol_poll() 调用不变
 
 7. **扩展 UART 输出帧格式**
@@ -150,7 +155,7 @@
 
 | 序号 | 验证项 | 方法 |
 |---|---|---|
-| 1 | navi_bridge 调用 navi_run_one_frame 正确触发 | 在 bridge 内加计数/标志, 观察是否每 4 帧触发一次 |
+| 1 | navi_pipeline 调用 navi_run_one_frame 正确触发 | 在 pipeline 内加计数/标志, 观察是否每 4 帧触发一次 |
 | 2 | navi_init 成功完成, 无 HardFault/Debug Monitor | 在 navi_init 后加 GPIO toggle (或 printf 打印), 板子跑起来看 LED |
 | 3 | mat_inverse 不再调用 malloc, 无 HEAP 残留 | 检查 map 文件中 HEAP section 是否仍为 0 |
 | 4 | 导航状态 att/vn/pos 能正常输出 (哪怕是模拟值) | UART0 用调试助手接, 看导航帧数据是否连续变化 |

@@ -4,7 +4,7 @@
  *
  * 职责:
  *   - USART0 230400 8E1 + DMA1_CH2 循环 RX 配置
- *   - T_HJD_POSDATA 帧解析 (同步字 0x55 0xBB + 51B + XOR 校验)
+ *   - T_HJD_POSDATA 帧解析 (同步字 0x55 0xBB + 51B + 累加和低 8 位校验)
  *   - DMA 环形缓冲 + 状态机逐字节对齐
  *   - pump() 主循环驱动, 吐出 gnss1_rx_result_t
  *
@@ -23,8 +23,8 @@
 
 /* ---- DMA RX 配置 ---- */
 
-/** RX DMA 缓冲区大小 (2048 字节 ≈ 40 帧 ≈ 87.2 ms 线上数据 @230400 8E1)
- *  一圈 87.2ms 远大于主循环最坏路径 (< 5ms per sample + Kalman), 彻底消除 ovf 边界条件. */
+/** RX DMA 缓冲区大小 (2048 字节 ≈ 40 帧 ≈ 97.8 ms 线上数据 @230400 8E1)
+ *  一圈 97.8ms 远大于主循环最坏路径 (< 5ms per sample + Kalman), 彻底消除 ovf 边界条件. */
 #define GNSS_RX_DMA_BUF_SIZE 2048U
 
 /** GD32F4xx USART0_RX → DMA1 Channel 2 / Subperipheral 4 */
@@ -36,8 +36,8 @@
 
 typedef enum
 {
-    RX_STATE_SYM1 = 0, /* 等 0xBB */
-    RX_STATE_SYM2,     /* 等 0x55 */
+    RX_STATE_SYM1 = 0, /* 等 0x55 */
+    RX_STATE_SYM2,     /* 等 0xBB */
     RX_STATE_LEN,      /* 读 u8FrameLen */
     RX_STATE_DATA      /* 收数据区 + 校验 */
 } rx_state_t;
@@ -279,7 +279,7 @@ void gnss1_rx_pump(void)
      *    DMA1_CH2 FTF ISR 已使能, 每圈完成时 ++s_dma_write_laps.
      *    注: 理论上 FTF ISR 可能在 write_idx 与 write_total 之间插入,
      *    导致 write_total 多算整圈触发 ovf_count 假阳性. 实测扩大缓冲至
-     *    2048 字节后 (一圈 87.2ms), 主循环 5ms 节拍远小于此窗口,
+     *    2048 字节后 (一圈 97.8ms), 主循环 5ms 节拍远小于此窗口,
      *    该 TOCTOU 竞态实际影响可忽略, 故不做 __disable_irq 保护. */
     write_idx = (uint16_t)(GNSS_RX_DMA_BUF_SIZE -
                            dma_transfer_number_get(GNSS_RX_DMA, GNSS_RX_DMA_CHANNEL));

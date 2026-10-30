@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /*
- * v1.1.0: USART0 已专用于 GNSS1 接收 (RX) + 导航结果发送 (TX),
+ * v1.2.0: USART0 已专用于 GNSS1 接收 (RX) + 导航结果发送 (TX),
  *         版本查询命令解析功能已移除.
  *         保留 version_get_str / version_get_build_date / version_get_build_time
  *         供其他模块查询版本信息.

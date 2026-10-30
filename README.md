@@ -1,6 +1,6 @@
 # IMU_Project — GD32F405 组合导航固件
 
-> **v1.5.0** · GD32F405 (Cortex-M4F, 168MHz) 组合导航固件。
+> **v1.5.1** · GD32F405 (Cortex-M4F, 168MHz) 组合导航固件。
 > 当前状态：**GNSS1 真机接入 + INS / 15 维 Kalman 融合链路闭环**
 > （USART0 230400 8E1 + DMA1_CH2 循环缓冲，解析 T_HJD_POSDATA 帧）；GNSS2 仍为 stub。
 >
@@ -16,7 +16,7 @@ IMU_Project/
 │   ├── main.c                     主循环 / 初始化 / 致命故障停机 (g_main_fault_code)
 │   ├── navi_pipeline.c            导航流水线编排 —— feed_imu + run_kalman + get_state
 │   ├── navi_pipeline.h            流水线对外 API
-│   ├── version.c / version.h      固件版本号 (v1.5.0) + 上电 printf
+│   ├── version.c / version.h      固件版本号 (v1.5.1) + 上电 printf
 │   ├── gnss1_rx.c / gnss1_rx.h    GNSS1 帧接收解析 (USART0 DMA1_CH2 循环 + 环形缓冲)
 │   ├── systick.c / systick.h      SysTick 1ms 中断 + 自由运行毫秒计数 g_sys_tick_ms
 │   ├── XV7021.c / XV7021.h        三轴陀螺 SPI 驱动
@@ -158,7 +158,7 @@ USART0 → PA9 TX (导航结果帧) / PA10 RX (GNSS1)，**230400, 8E1 (9bit + �
 | 高度 / 速度单位 | 0.1 m / 0.1 m/s |
 | PDOP 单位 | 0.01 |
 | 定位有效 | `u8PosVld == 2` → `flag_GNSS1valid = 1` |
-| RX 通道 | **DMA1_CH2 / SUBPERI4**, 循环模式, **2048 字节环形缓冲** (≈40 帧 ≈ 87.2ms) |
+| RX 通道 | **DMA1_CH2 / SUBPERI4**, 循环模式, **2048 字节环形缓冲** (≈40 帧 ≈ 97.8ms) |
 | TX 通道 | DMA1_CH7 (uart.c, 发导航结果帧) |
 
 关键字段偏移 (帧内字节索引)：
@@ -231,15 +231,15 @@ para_calerr[24, 25, 26] = 1.0;        /* 加表 K1a 标度恒等 */
 
 ---
 
-## 内存占用 (v1.5.0 实测, Keil build 报告)
+## 内存占用 (当前构建实测, Keil build 报告)
 
 | 区域 | 大小 | 说明 |
 | --- | --- | --- |
-| Code | 38,232 B | Navi 算法 + gnss1_rx + math 库（含 `mat_multi_f*` float 内核与 `mat_inverse` float 高斯消元，-O3 循环展开） |
+| Code | 38,256 B | Navi 算法 + gnss1_rx + math 库（含 `mat_multi_f*` float 内核与 `mat_inverse` float 高斯消元，-O3 循环展开） |
 | RO-data | 1,088 B | 常量表 |
 | RW-data | 180 B | 已初始化变量 (含 `g_main_fault_code` 等) |
 | ZI-data | 42,012 B | 零初始化 (Stack 28,672 + Kalman15d 静态矩阵 + 2048 B GNSS 环缓冲) |
-| **Flash 合计** | **≈ 38.6KB / 480KB** | Code + RO + RW = 39,500 B |
+| **Flash 合计** | **≈ 38.6KB / 480KB** | Code + RO + RW = 39,524 B |
 | **SRAM 合计** | **≈ 41.2KB / 128KB** | RW + ZI = 42,192 B |
 | Heap_Size | 0 | startup 0x0000 (零 malloc) |
 
@@ -254,7 +254,7 @@ para_calerr[24, 25, 26] = 1.0;        /* 加表 K1a 标度恒等 */
   v1.4.0 把 `mat_inverse` float 化后量测更新再降到 **1.066 ms**（−34%），预期峰值约 4.1 ms。
 - **采样节拍**：5 ms = 840,000 周期；`imu_sample_due` 是标志位而非计数器，单轮若超过 5 ms 会吞节拍。
   连续运行实测 `g_loop_over5ms_count = 0`（该计数器已在 v1.4.0 清理时移除，需复测时临时加回）。
-- **环缓冲**：2048 B ≈ 87.2 ms 线上数据，远大于单轮耗时，正常运行时 `g_gnss_ovf_count` 恒为 0。
+- **环缓冲**：2048 B ≈ 97.8 ms 线上数据，远大于单轮耗时，正常运行时 `g_gnss_ovf_count` 恒为 0。
   此前观察到的非零丢帧/覆盖计数，均由 Keil 断点停机期间 DMA 继续灌满环缓冲造成（调试假象）。
 - **栈**：`Stack_Size = 0x7000`（28,672 B）。float 化后 `Kalman15d_MesUpdate` 栈数组约 11 KB
   （原 double 版 22,040 B，0x2000 会溢出并压坏 `.bss`）。
@@ -292,7 +292,7 @@ para_calerr[24, 25, 26] = 1.0;        /* 加表 K1a 标度恒等 */
 | `imu_sample_due` (timer.c, volatile) | TIMER3 5ms 采样节拍标志 | 置 1 后由主循环消费清 0 |
 | `g_gnss_frame_count` (gnss1_rx.c) | 累计校验通过的帧数 | 持续递增 = 接收正常 |
 | `g_gnss_err_count` (gnss1_rx.c) | 校验失败帧数 | 应保持 0；递增 = 有字节但帧错位 |
-| `g_gnss_ovf_count` (gnss1_rx.c) | DMA 环缓冲整圈覆盖次数 | 应保持 0；非 0 = 主循环停顿 >87.2ms（或断点停机） |
+| `g_gnss_ovf_count` (gnss1_rx.c) | DMA 环缓冲整圈覆盖次数 | 应保持 0；非 0 = 主循环停顿 >97.8ms（或断点停机） |
 | `g_gnss_ovf_stamp_ms[8]` / `g_gnss_ovf_stamp_idx` (gnss1_rx.c) | 最近 8 次覆盖发生的毫秒时刻 (环形) | 与 `g_sys_tick_ms` 对照，区分"调试停机"与"真实卡顿" |
 | `g_gnss_result` (gnss1_rx.c) | 最新解析结果 (lat/lon/height/vn/PDOP/sat) | 与实测坐标对照 |
 | `g_imu` / `g_sys` / `g_ahrs` / `g_k15s` (navi_pipeline.c, static) | 惯导 / 标志位 / 姿态 / 滤波器状态 | 断点须落在 `navi_pipeline.c` 内才可 Watch |
@@ -312,7 +312,7 @@ Keil MDK-ARM (ARMCC V5), 优化等级 **Level 3 (-O3 -Otime)** (`<Optim>4</Optim
 ```
 Open project/template.uvprojx → Rebuild All
 Expected: 0 error, 0 warning
-Flash size: ~38.6KB / 480KB  (Code 38,232 + RO 1,088 + RW 180 = 39,500 B)
+Flash size: ~38.6KB / 480KB  (Code 38,256 + RO 1,088 + RW 180 = 39,524 B)
 SRAM size:  ~41.2KB / 128KB  (RW 180 + ZI 42,012 = 42,192 B，ZI 含 Stack 28,672)
 Stack      : Stack_Size 0x7000 (startup_gd32f405.s)
 ```

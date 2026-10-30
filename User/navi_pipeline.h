@@ -24,7 +24,7 @@
  *   2. 温补参数 GetErrorPara_TC (T_gyro/T_acc → errpara_TC)
  *   3. ErrorComp ×2 (温补级 → 标定级 → data_gyro/data_acc)
  *   4. GetGNSSType + IsGNSSDataValid (判定 GNSS 类型 + 有效性)
- *   5. 粗对准 3 步状态机 (CoarseAlign_Horizon_RT + GNSS heading 装航向)
+ *   5. 粗对准 3 步状态机 (CoarseAlign_Horizon_RT + 固定航向装订 GNSS1_DEFAULT_HEADING_DEG)
  *   6. ins_update_RT 双子样 (对准完成后跑, flag_navsuc 每 10ms 置 1)
  *
  * run_kalman 内部 3 步流水线 (每 10ms):

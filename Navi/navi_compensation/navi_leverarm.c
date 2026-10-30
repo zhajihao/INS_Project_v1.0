@@ -89,7 +89,7 @@ void LeverArm_Spatial(struct Imu_Infor *p_imu_infor, struct Sys_Infor *p_sys_inf
 	mat_multi((*p_imu_infor).cnb[0], v_temp1, v_temp2, 3, 3, 1);		  // v_temp2=cnb*cross(wbeb,r_outlearm)
 	mat_multi_num(v_temp2, -1.0, (*p_sys_infor).dvnL, 3, 1);			  // dvnL=-cnb*cross(wbeb,r_outlearm)
 
-	mat_multi((*p_imu_infor).cnb[0], (*p_sys_infor).r_outlearm, v_temp3, 3, 3, 1); // v_temp3=cnb*r_outlearm
-	mat_multi(Mpv[0], (*p_sys_infor).r_outlearm, v_temp3, 3, 3, 1);				   // v_temp3=cnb*r_outlearm
-	mat_multi_num(v_temp3, -1.0, (*p_sys_infor).dpGL, 3, 1);					   // dpGL=-cnb*r_outlearm
+	mat_multi((*p_imu_infor).cnb[0], (*p_sys_infor).r_outlearm, v_temp3, 3, 3, 1); // v_temp3=cnb*r_outlearm (下一行即被覆盖)
+	mat_multi(Mpv[0], (*p_sys_infor).r_outlearm, v_temp3, 3, 3, 1);				   // v_temp3=Mpv*r_outlearm (覆盖上一行)
+	mat_multi_num(v_temp3, -1.0, (*p_sys_infor).dpGL, 3, 1);					   // dpGL=-Mpv*r_outlearm
 }

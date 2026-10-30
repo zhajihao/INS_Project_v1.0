@@ -1,9 +1,11 @@
 /**
  * @file navi_api.h
- * @brief 组合导航对外统一接口
+ * @brief 组合导航核心接口 (初始化 + 旧链路单帧入口)
  *
- * 上层(Lwip 应用 main.c / proto 命令处理)只需 include 本文件,
- * 在每帧 IMU 数据就绪后填充 imu->gyro_ori/acc_ori 并调用 navi_run_one_frame。
+ * 本固件 (IMU_Project) 的调用方是 User/navi_pipeline.c:
+ *   - navi_init() 由 navi_pipeline_init() 调用完成惯导/地球参数/15d 滤波器初始化;
+ *   - navi_run_one_frame() 是 7d 精对准 / 19d 组合导航旧链路的入口,
+ *     当前 15 维 Kalman 方案未使用它 (保留以备回退)。
  */
 #ifndef NAVI_API_H
 #define NAVI_API_H
