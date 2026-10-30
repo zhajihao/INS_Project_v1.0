@@ -13,14 +13,14 @@ static uint8_t uart0_tx_busy;
 volatile uint32_t uart0_dma_tx_dropped_packets;
 
 /**
- * @brief  初始化 UART0 TX (GPIO + USART0 + DMA1 CH7 TX)
+ * @brief  初始化 UART0 (GPIO + USART0 230400 8E1 + DMA1 CH7 TX)
  *
- * @note   RX 不再在此配置 —— GNSS1 接收由 gnss1_rx_init() 配置为
- *         DMA1_CH2 循环模式 (230400, 8E1).
- *         本函数配置 TX DMA 后, gnss1_rx_init 会重新配置 USART0 参数
- *         (波特率/偶校验), 并重新使能 TX DMA 请求.
+ * @note   本函数是 USART0 参数 (波特率/字长/校验/使能) 的唯一配置者.
+ *         RX 侧由 gnss1_rx_init() 追加: DMA1_CH2 循环模式 + DENR 使能.
+ *         TX DMA 请求 (DENT) 也在本函数内使能, 且 gnss1_rx_init 不再调用
+ *         usart_deinit, 因此发送链路不依赖两个初始化函数的调用顺序.
  *
- * @param  baudrate  波特率 (最终由 gnss1_rx_init 覆盖为 230400)
+ * @param  baudrate  波特率 (实际使用 230400, 与 GNSS1 接收机一致)
  */
 void UART0_DMA_Init(uint32_t baudrate)
 {
@@ -37,12 +37,12 @@ void UART0_DMA_Init(uint32_t baudrate)
     gpio_output_options_set(UART0_GPIO_PORT, GPIO_OTYPE_PP, GPIO_OSPEED_50MHZ,
                             UART0_TX_PIN);
 
-    /* USART0: 8N1 (后续由 gnss1_rx_init 改为 8E1) */
+    /* USART0: 230400 8E1 (8 数据位 + 偶校验, 校验位计入字长 → WL_9BIT) */
     usart_deinit(USART0);
     usart_baudrate_set(USART0, baudrate);
-    usart_word_length_set(USART0, USART_WL_8BIT);
+    usart_word_length_set(USART0, USART_WL_9BIT);
     usart_stop_bit_set(USART0, USART_STB_1BIT);
-    usart_parity_config(USART0, USART_PM_ODD);
+    usart_parity_config(USART0, USART_PM_EVEN);
     usart_receive_config(USART0, USART_RECEIVE_ENABLE);
     usart_transmit_config(USART0, USART_TRANSMIT_ENABLE);
     usart_enable(USART0);

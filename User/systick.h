@@ -39,6 +39,9 @@ OF SUCH DAMAGE.
 
 #include <stdint.h>
 
+/** @brief 自由运行毫秒计数 (SysTick 1ms 中断递增, 约 49.7 天回绕) */
+extern volatile uint32_t g_sys_tick_ms;
+
 void systick_config(void);
 void delay_1ms(uint32_t count);
 void delay_decrement(void);

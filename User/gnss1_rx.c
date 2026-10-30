@@ -15,6 +15,7 @@
 
 #include "gnss1_rx.h"
 #include "uart.h"
+#include "systick.h"
 #include "navi_config/navi_constants.h"
 #include "gd32f4xx_dma.h"
 #include "gd32f4xx_usart.h"
@@ -57,6 +58,11 @@ gnss1_rx_result_t g_gnss_result;      /* 最新一帧解析结果 (只由 parse_
 volatile uint32_t g_gnss_frame_count; /* 累计有效帧 (校验通过) */
 volatile uint32_t g_gnss_err_count;   /* 校验失败计数 */
 volatile uint32_t g_gnss_ovf_count;   /* DMA 环缓冲整圈覆盖 */
+
+/* 溢出时刻快照 (环形, 单位 ms): 用于事后区分"调试器 halt 造成"与"主循环真实卡顿".
+ * 若正常跑机时 g_gnss_ovf_count 增长, 相邻戳之间的间隔即为主循环停滞时长. */
+volatile uint32_t g_gnss_ovf_stamp_ms[GNSS_RX_OVF_STAMP_NUM];
+volatile uint8_t g_gnss_ovf_stamp_idx;
 
 static uint8_t s_result_new; /* 1=有新结果待读 (内部标志) */
 
@@ -218,20 +224,9 @@ void gnss1_rx_init(void)
 {
     dma_single_data_parameter_struct dma_config;
 
-    /* 重新配置 USART0: 230400, 8E1 (偶校验)
-     * 注意: 偶校验需要 9bit 字长 (8 数据 + 1 校验)
-     * TX DMA 已由 UART0_DMA_Init 配好, 这里只重配 USART 参数 + RX DMA */
-    usart_deinit(USART0);
-    usart_baudrate_set(USART0, 230400U);
-    usart_word_length_set(USART0, USART_WL_9BIT); /* 8 数据 + 1 校验 = 9bit */
-    usart_stop_bit_set(USART0, USART_STB_1BIT);
-    usart_parity_config(USART0, USART_PM_EVEN); /* 偶校验 */
-    usart_receive_config(USART0, USART_RECEIVE_ENABLE);
-    usart_transmit_config(USART0, USART_TRANSMIT_ENABLE);
-    usart_enable(USART0);
-
-    /* 重新使能 TX DMA 请求 (usart_deinit 会关掉) */
-    usart_dma_transmit_config(USART0, USART_DENT_ENABLE);
+    /* USART0 的波特率/字长/停止位/校验由 UART0_DMA_Init 独占配置 (230400 8E1).
+     * 本函数只负责 RX 侧: DMA1_CH2 循环搬运 + DENR 使能 + 环形缓冲状态复位.
+     * 注意不能调用 usart_deinit —— 它会连 TX 的 DENT 一起清掉, 破坏发送链路. */
 
     /* ---- RX DMA: DMA1_CH2 循环模式 ---- */
     dma_deinit(GNSS_RX_DMA, GNSS_RX_DMA_CHANNEL);
@@ -263,6 +258,8 @@ void gnss1_rx_init(void)
     g_gnss_frame_count = 0U;
     g_gnss_err_count = 0U;
     g_gnss_ovf_count = 0U;
+    g_gnss_ovf_stamp_idx = 0U;
+    memset((void *)g_gnss_ovf_stamp_ms, 0, sizeof(g_gnss_ovf_stamp_ms));
     memset(&g_gnss_result, 0, sizeof(g_gnss_result));
 
     /* 使能 DMA1_CH2 FTF 中断: 环形缓冲每圈完成时触发, ISR 里 ++s_dma_write_laps,
@@ -294,6 +291,10 @@ void gnss1_rx_pump(void)
     if (available > GNSS_RX_DMA_BUF_SIZE)
     {
         g_gnss_ovf_count++;
+        /* 记录本次溢出时刻 (ms), 供事后判定是调试 halt 还是主循环真实卡顿 */
+        g_gnss_ovf_stamp_ms[g_gnss_ovf_stamp_idx] = g_sys_tick_ms;
+        g_gnss_ovf_stamp_idx = (uint8_t)((g_gnss_ovf_stamp_idx + 1U) %
+                                         GNSS_RX_OVF_STAMP_NUM);
         s_dma_read_total = write_total - GNSS_RX_DMA_BUF_SIZE;
         available = GNSS_RX_DMA_BUF_SIZE;
     }

@@ -38,6 +38,14 @@ extern "C"
 /** 校验和累加范围字节数 (索引 0 起至校验字节前, 不含 u8Xor) */
 #define GNSS_HJD_CHECKSUM_LEN (GNSS_HJD_TOTAL_LEN - 1U)
 
+/** 环缓冲溢出时刻快照条数 (环形记录, 最新覆盖最旧) */
+#define GNSS_RX_OVF_STAMP_NUM 8U
+
+    /** @brief 溢出时刻快照 (单位 ms, 由 g_sys_tick_ms 提供), 环形写入 */
+    extern volatile uint32_t g_gnss_ovf_stamp_ms[GNSS_RX_OVF_STAMP_NUM];
+    /** @brief 下一次溢出时刻写入的下标 (0..GNSS_RX_OVF_STAMP_NUM-1) */
+    extern volatile uint8_t g_gnss_ovf_stamp_idx;
+
     /* ---- 解析结果 (GNSS1 通道输出, 供 navi_pipeline 使用) ---- */
 
     /**

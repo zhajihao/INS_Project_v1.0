@@ -5,9 +5,9 @@
 
 /* 固件版本号 */
 #define FW_VERSION_MAJOR 1
-#define FW_VERSION_MINOR 4
+#define FW_VERSION_MINOR 5
 #define FW_VERSION_PATCH 0
-#define FW_VERSION_STR "IMU+NAV v1.4.0"
+#define FW_VERSION_STR "IMU+NAV v1.5.0"
 
 /* 版本更新记录
  * 2026-09-14 使用外部 16 MHz 晶振。
@@ -184,6 +184,24 @@
  *     完全保留; SPI/DMA/UART/GNSS 解析/导航融合时序未变; 所有打点变量本身就只写
  *     不读, 删除无功能回归; gnss_hjd 三个保留诊断变量 (frame/err/ovf) 仍被业务引用,
  *     不是打点
+ * 2026-10-30 [v1.5.0] 健壮性与可观测性收尾:
+ *   - 初始化失败不再从 main() 返回 (裸机下 main 返回属未定义行为, 会跳飞):
+ *     改为 main_fault_halt() 记录 g_main_fault_code 后关总中断死循环停机,
+ *     故障码非 static, 可直接在 Keil Watch 查看
+ *   - SysTick 增加自由运行毫秒计数 g_sys_tick_ms (1ms 递增, 约 49.7 天回绕)
+ *   - GNSS 环缓冲溢出时刻快照: g_gnss_ovf_stamp_ms[8] + g_gnss_ovf_stamp_idx,
+ *     用于事后区分"调试器 halt 造成"与"主循环真实卡顿"; pump 主路径行为不变
+ *   - navi_pipeline_get_state 姿态改由 m2att(g_imu.cnb) 实时反解:
+ *     原实现直读 g_imu.att, 而 15 维 Kalman 链路不刷新该数组 (仅粗对准写一次),
+ *     上报姿态会停留在对准时刻; 粗对准未完成时仍回退 g_imu.att
+ *   - 删除死 API navi_pipeline_get_phase / navi_pipeline_phase_str / navi_phase_t
+ *   - 删除 s_gnss2_stub 未使用的 heading_deg 字段
+ *   - USART0 配置归属收敛: 波特率/字长/校验/DENT 统一由 UART0_DMA_Init 配置
+ *     (230400 8E1), gnss1_rx_init 只追加 RX DMA 通道 + DENR + 环缓冲复位,
+ *     不再调用 usart_deinit, 消除重复配置与调用顺序依赖
+ *   - 编译尺寸 (ARMCC V5 -O3 -Otime): Code 38,224 → 38,232 (+8B),
+ *     RW 164 → 180 (+16B, 故障码/溢出快照), ZI 41,980 → 42,012 (+32B);
+ *     0 Error 0 Warning
  */
 
 /* 编译时间由编译器自动填入。 */

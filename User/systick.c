@@ -39,6 +39,11 @@ OF SUCH DAMAGE.
 
 volatile static uint32_t delay;
 
+/* ---- 自由运行毫秒计数 ----
+ * SysTick 以 1ms 周期中断, 每次中断 (delay_decrement) 递增一次.
+ * 用途: 给主循环/事件处理提供无阻塞时间戳 (如 GNSS 溢出时刻), 约 49.7 天回绕. */
+volatile uint32_t g_sys_tick_ms = 0U;
+
 /*!
     \brief    configure systick
     \param[in]  none
@@ -82,6 +87,8 @@ void delay_1ms(uint32_t count)
 */
 void delay_decrement(void)
 {
+    ++g_sys_tick_ms;
+
     if (0U != delay)
     {
         delay--;

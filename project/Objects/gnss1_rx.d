@@ -36,5 +36,6 @@
 .\objects\gnss1_rx.o: ..\Library\Include\gd32f4xx_usart.h
 .\objects\gnss1_rx.o: ..\Library\Include\gd32f4xx_wwdgt.h
 .\objects\gnss1_rx.o: ..\Library\Include\gd32f4xx_misc.h
+.\objects\gnss1_rx.o: ..\User\systick.h
 .\objects\gnss1_rx.o: ..\Navi\navi_config/navi_constants.h
 .\objects\gnss1_rx.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h

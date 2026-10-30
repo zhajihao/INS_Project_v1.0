@@ -61,21 +61,19 @@ static uint8_t s_initialized;
 /**
  * @brief  GNSS2 stub 静态数据
  *
- * 同位置但航向 45°, PDOP 1.5 (独立第二路卫导).
+ * 固定位置/速度 (独立第二路卫导占位), PDOP 1.5; 单天线无航向字段.
  */
 static const struct
 {
     double vn_E, vn_N, vn_U;
     double lat_deg, lon_deg, height_m;
-    double heading_deg;
     uint8_t status;
     uint8_t sat_num;
     float pdop;
 } s_gnss2_stub = {
     0.0, 0.0, 0.0,
     34.2, 108.8, 400.0,
-    45.0, /* heading */
-    0x03, /* status: bit0定位有效 bit1速度有效 (无航向) */
+    0x03, /* status: bit0定位有效 bit1速度有效 (单天线无航向) */
     12,
     1.5f /* PDOP_2 */
 };
@@ -392,62 +390,34 @@ uint8_t navi_pipeline_run_kalman(void)
 /* ---- 对外查询接口 ---- */
 
 /**
- * @brief  查询当前导航阶段
- *
- * 判定规则:
- *   s_initialized==0 → NAVI_PHASE_IDLE
- *   flag_Finish_calign==0 → NAVI_PHASE_COARSE_ALN (还在粗对准计时)
- *   否则 NAVI_PHASE_INTEGRATED (INS + 15d Kalman 融合)
- *
- * @retval navi_phase_t 枚举值, 可直接用来决定日志/Debug 输出
- */
-navi_phase_t navi_pipeline_get_phase(void)
-{
-    if (!s_initialized)
-        return NAVI_PHASE_IDLE;
-    if (g_sys.flag_Finish_calign == 0)
-        return NAVI_PHASE_COARSE_ALN;
-    return NAVI_PHASE_INTEGRATED;
-}
-
-/**
- * @brief  阶段枚举 → 可读字符串 (用于日志/Debug)
- * @retval "IDLE" / "COARSE_ALIGN" / "INS_15D_KF" / "UNKNOWN"
- */
-const char *navi_pipeline_phase_str(void)
-{
-    switch (navi_pipeline_get_phase())
-    {
-    case NAVI_PHASE_IDLE:
-        return "IDLE";
-    case NAVI_PHASE_COARSE_ALN:
-        return "COARSE_ALIGN";
-    case NAVI_PHASE_INTEGRATED:
-        return "INS_15D_KF";
-    default:
-        return "UNKNOWN";
-    }
-}
-
-/**
  * @brief  查询导航状态量 (att/vn/pos 全部为最新值)
  *
- * att 取自 g_imu.att[3] (rad), vn 取自 g_imu.vn[3] (m/s 导航系),
- * pos 取自 g_imu.pos[3] ([纬度rad, 经度rad, 高度m]).
+ * att 由 g_imu.cnb 经 m2att 实时反解 (顺序 [pitch, roll, yaw] rad, 与导航帧一致);
+ * 仅在粗对准尚未完成时回退到 g_imu.att (此时 cnb 还未进入惯导递推).
+ * vn 取自 g_imu.vn[3] (m/s 导航系), pos 取自 g_imu.pos[3] ([纬度rad, 经度rad, 高度m]).
  * 任一参数传 NULL 则跳过该组拷贝, 调用方可按需取子集.
  *
- * @param  att_rad[3]   [out] 姿态角 [横滚, 俯仰, 航向] (rad), NULL 可跳过
+ * @param  att_rad[3]   [out] 姿态角 [俯仰, 横滚, 航向] (rad), NULL 可跳过
  * @param  vn_mps[3]    [out] 导航系速度 [东, 北, 天] (m/s), NULL 可跳过
  * @param  pos[3]       [out] 位置 [纬度(rad), 经度(rad), 高度(m)], NULL 可跳过
- * @note   粗对准阶段 att 为 CoarseAlign_Horizon_RT 输出, INS+KF 阶段为 Kalman_Feedback 校正后值.
+ * @note   15 维 Kalman 链路不刷新 g_imu.att (只有粗对准与 7d/12d 链路写它),
+ *         故此处必须用 m2att(cnb) 反解, 否则上报的姿态会停留在粗对准时刻.
  */
 void navi_pipeline_get_state(double att_rad[3], double vn_mps[3], double pos[3])
 {
     if (att_rad)
     {
-        att_rad[0] = g_imu.att[0];
-        att_rad[1] = g_imu.att[1];
-        att_rad[2] = g_imu.att[2];
+        if (g_sys.flag_Finish_calign != 0)
+        {
+            /* cnb 已由 ins_update_RT/Kalman_Feedback 持续修正, 直接反解姿态 */
+            m2att(g_imu.cnb, att_rad);
+        }
+        else
+        {
+            att_rad[0] = g_imu.att[0];
+            att_rad[1] = g_imu.att[1];
+            att_rad[2] = g_imu.att[2];
+        }
     }
     if (vn_mps)
     {

@@ -44,14 +44,6 @@ extern "C"
 {
 #endif
 
-    /** @brief 导航对齐阶段 (本固件只有粗对准, 没有 7d 精对准) */
-    typedef enum
-    {
-        NAVI_PHASE_IDLE = 0,       /**< 未初始化 */
-        NAVI_PHASE_COARSE_ALN = 1, /**< 粗对准 (CoarseAlign_Horizon_RT + GNSS heading) */
-        NAVI_PHASE_INTEGRATED = 2  /**< INS + 15d Kalman 组合导航 */
-    } navi_phase_t;
-
     void navi_pipeline_init(void);
 
     void navi_pipeline_feed_imu(const float accel_mps2[3], const float gyro_radps[3],
@@ -59,11 +51,7 @@ extern "C"
 
     uint8_t navi_pipeline_run_kalman(void);
 
-    navi_phase_t navi_pipeline_get_phase(void);
-
     void navi_pipeline_get_state(double att_rad[3], double vn_mps[3], double pos[3]);
-
-    const char *navi_pipeline_phase_str(void);
 
 #ifdef __cplusplus
 }

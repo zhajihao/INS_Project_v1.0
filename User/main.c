@@ -23,6 +23,27 @@
 #define MAIN_FAULT_XV7021_INIT 2
 #define MAIN_FAULT_NAVI_INIT 3
 
+/* ---- 致命故障停机 ----
+ * 裸机环境下 main() 返回属未定义行为 (向量表无调用者, 会跳飞或复位),
+ * 因此初始化失败时记录故障码后死循环停机:
+ *   - g_main_fault_code 非 static, 便于 Keil Watch 直接查看故障原因
+ *   - 关闭总中断, 避免外设未就绪时 ISR 继续运行 */
+volatile uint32_t g_main_fault_code = 0U;
+
+/**
+ * @brief  初始化失败后的安全停机
+ * @param  code  故障码 (MAIN_FAULT_xxx)
+ * @note   本函数不会返回
+ */
+static void main_fault_halt(uint32_t code)
+{
+    g_main_fault_code = code;
+    __disable_irq();
+    for (;;)
+    {
+    }
+}
+
 /**
  * @brief  IMU + 组合导航主程序入口
  *
@@ -61,7 +82,8 @@ int main(void)
     /* ---- 初始化 ----
      *
      * 顺序: 时钟 → SysTick → 外设 (UART0 DMA / 传感器 / TIMER3) → navi_pipeline → gnss1_rx
-     *   - UART0 先初始化 (DMA1_CH2 基础配置), gnss1_rx_init 后调会重配 USART0 参数
+     *   - UART0_DMA_Init 独占配置 USART0 (GPIO/230400 8E1/TX DMA),
+     *     gnss1_rx_init 只追加 RX DMA 通道 (DMA1_CH2) 与环缓冲状态
      *   - TIMER3 5ms ISR 只置 imu_sample_due=1, 主循环消费 (避免 ISR 内跑 SPI/DWT)
      *   - navi_pipeline_init 必须在所有传感器 init 之后 (依赖 g_imu.ts/fs 等装订) */
     rcu_ahb_clock_config(RCU_AHB_CKSYS_DIV1);
@@ -70,20 +92,20 @@ int main(void)
     UART0_DMA_Init(230400U);
 
     if (adxl357_init() != 0U)
-        return MAIN_FAULT_ADXL357_INIT;
+        main_fault_halt(MAIN_FAULT_ADXL357_INIT);
 
     XV7021BB_BoardInit();
     sensor_init_status = XV7021BB_InitAll();
     if (sensor_init_status != XV7021BB_OK)
-        return MAIN_FAULT_XV7021_INIT;
+        main_fault_halt(MAIN_FAULT_XV7021_INIT);
 
     TIMER3_Init(IMU_SAMPLE_PERIOD_MS);
 
     /* 组合导航初始化 (依赖所有传感器已就绪) */
     navi_pipeline_init();
 
-    /* USART0 GNSS1 接收初始化 (230400 8E1, DMA1_CH2 循环模式)
-     * 必须在 UART0_DMA_Init 之后, 会重新配置 USART0 参数 */
+    /* USART0 GNSS1 接收初始化: 仅追加 RX 侧 (DMA1_CH2 循环模式 + DENR + 环缓冲)
+     * USART0 模式 (230400 8E1) 已在 UART0_DMA_Init 中配置完毕, 此处不重复配置 */
     gnss1_rx_init();
 
     /* ---- 主循环骨架 ----
