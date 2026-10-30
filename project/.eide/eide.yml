@@ -1,0 +1,271 @@
+version: "4.1"
+name: template
+type: ARM
+deviceName: null
+packDir: null
+srcDirs: []
+virtualFolder:
+  name: <virtual_root>
+  files: []
+  folders:
+    - name: CMSIS
+      files:
+        - path: ../CMSIS/system_gd32f4xx.c
+        - path: ../CMSIS/gd32f4xx.h
+      folders: []
+    - name: Startup
+      files:
+        - path: ../Startup/startup_gd32f405.s
+      folders: []
+    - name: Library
+      files:
+        - path: ../Library/Source/gd32f4xx_adc.c
+        - path: ../Library/Source/gd32f4xx_can.c
+        - path: ../Library/Source/gd32f4xx_crc.c
+        - path: ../Library/Source/gd32f4xx_ctc.c
+        - path: ../Library/Source/gd32f4xx_dac.c
+        - path: ../Library/Source/gd32f4xx_dbg.c
+        - path: ../Library/Source/gd32f4xx_dci.c
+        - path: ../Library/Source/gd32f4xx_dma.c
+        - path: ../Library/Source/gd32f4xx_enet.c
+        - path: ../Library/Source/gd32f4xx_exmc.c
+        - path: ../Library/Source/gd32f4xx_exti.c
+        - path: ../Library/Source/gd32f4xx_fmc.c
+        - path: ../Library/Source/gd32f4xx_fwdgt.c
+        - path: ../Library/Source/gd32f4xx_gpio.c
+        - path: ../Library/Source/gd32f4xx_i2c.c
+        - path: ../Library/Source/gd32f4xx_ipa.c
+        - path: ../Library/Source/gd32f4xx_iref.c
+        - path: ../Library/Source/gd32f4xx_misc.c
+        - path: ../Library/Source/gd32f4xx_pmu.c
+        - path: ../Library/Source/gd32f4xx_rcu.c
+        - path: ../Library/Source/gd32f4xx_rtc.c
+        - path: ../Library/Source/gd32f4xx_sdio.c
+        - path: ../Library/Source/gd32f4xx_spi.c
+        - path: ../Library/Source/gd32f4xx_syscfg.c
+        - path: ../Library/Source/gd32f4xx_timer.c
+        - path: ../Library/Source/gd32f4xx_tli.c
+        - path: ../Library/Source/gd32f4xx_trng.c
+        - path: ../Library/Source/gd32f4xx_usart.c
+        - path: ../Library/Source/gd32f4xx_wwdgt.c
+        - path: ../Library/Include/gd32f4xx_adc.h
+        - path: ../Library/Include/gd32f4xx_can.h
+        - path: ../Library/Include/gd32f4xx_crc.h
+        - path: ../Library/Include/gd32f4xx_ctc.h
+        - path: ../Library/Include/gd32f4xx_dac.h
+        - path: ../Library/Include/gd32f4xx_dbg.h
+        - path: ../Library/Include/gd32f4xx_dci.h
+        - path: ../Library/Include/gd32f4xx_dma.h
+        - path: ../Library/Include/gd32f4xx_enet.h
+        - path: ../Library/Include/gd32f4xx_exmc.h
+        - path: ../Library/Include/gd32f4xx_exti.h
+        - path: ../Library/Include/gd32f4xx_fmc.h
+        - path: ../Library/Include/gd32f4xx_fwdgt.h
+        - path: ../Library/Include/gd32f4xx_gpio.h
+        - path: ../Library/Include/gd32f4xx_i2c.h
+        - path: ../Library/Include/gd32f4xx_ipa.h
+        - path: ../Library/Include/gd32f4xx_iref.h
+        - path: ../Library/Include/gd32f4xx_misc.h
+        - path: ../Library/Include/gd32f4xx_pmu.h
+        - path: ../Library/Include/gd32f4xx_rcu.h
+        - path: ../Library/Include/gd32f4xx_rtc.h
+        - path: ../Library/Include/gd32f4xx_sdio.h
+        - path: ../Library/Include/gd32f4xx_spi.h
+        - path: ../Library/Include/gd32f4xx_syscfg.h
+        - path: ../Library/Include/gd32f4xx_timer.h
+        - path: ../Library/Include/gd32f4xx_tli.h
+        - path: ../Library/Include/gd32f4xx_trng.h
+        - path: ../Library/Include/gd32f4xx_usart.h
+        - path: ../Library/Include/gd32f4xx_wwdgt.h
+      folders: []
+    - name: User
+      files:
+        - path: ../User/main.c
+        - path: ../User/systick.c
+        - path: ../User/gd32f4xx_it.c
+        - path: ../User/MMC5983.c
+        - path: ../User/MMC5983.h
+        - path: ../User/ADXL357.c
+        - path: ../User/ADXL357.h
+        - path: ../User/XV7021.c
+        - path: ../User/XV7021.h
+        - path: ../User/IMU_FRAME.c
+        - path: ../User/IMU_FRAME.h
+        - path: ../User/main.h
+        - path: ../User/version.h
+        - path: ../User/version.c
+      folders: []
+    - name: Peripheral
+      files:
+        - path: ../Peripheral/UART/uart.c
+        - path: ../Peripheral/UART/uart.h
+        - path: ../Peripheral/SYS/sys.c
+        - path: ../Peripheral/SYS/sys.h
+        - path: ../Peripheral/Timer/timer.c
+        - path: ../Peripheral/Timer/timer.h
+        - path: ../Peripheral/SPI/spi.c
+        - path: ../Peripheral/SPI/spi.h
+        - path: ../Peripheral/EXTI/exti.c
+        - path: ../Peripheral/EXTI/exti.h
+        - path: ../Peripheral/I2C/i2c.c
+        - path: ../Peripheral/I2C/i2c.h
+      folders: []
+dependenceList: []
+outDir: build
+miscInfo:
+  uid: d6c4c66bafd6f3d5ce0fdbf385181cf9
+targets:
+  Target 1:
+    cppPreprocessAttrs:
+      defineList:
+        - GD32F405
+        - __FPU_PRESENT
+      incList:
+        - ../CMSIS
+        - ../Library/Include
+        - ../User
+        - ../Peripheral/UART
+        - ../Peripheral/SYS
+        - ../Peripheral/Timer
+        - ../Peripheral/SPI
+        - ../Peripheral/EXTI
+        - ../Peripheral/I2C
+        - .cmsis/include
+        - RTE/_Target 1
+      libList: []
+    excludeList: []
+    settings:
+      debugger: cortex-debug
+    toolchain: AC5
+    toolchainConfigMap:
+      AC5:
+        archExtensions: ""
+        cpuType: Cortex-M4
+        floatingPointHardware: single
+        options:
+          version: 4
+          afterBuildTasks:
+            - name: "[Copy linker output for Keil User Commands]"
+              abortAfterFailed: true
+              command: mkdir ${KEIL_OUTPUT_DIR} & copy "${OutDir}\${ProjectName}.axf" "${KEIL_OUTPUT_DIR}\${ProjectName}.axf"
+              disable: false
+            - name: "[Generate BIN from AXF]"
+              abortAfterFailed: true
+              command: D:\Keil_v5\ARM\ARMCC\bin\fromelf.exe --bin --output="${ProjectName}.bin" "${OutDir}\\${ProjectName}.axf"
+              disable: false
+          asm-compiler:
+            defines: []
+          beforeBuildTasks: []
+          c/cpp-compiler:
+            CXX_FLAGS: --diag_suppress=1 --diag_suppress=1295
+            C_FLAGS: --diag_suppress=1 --diag_suppress=1295
+            c99-mode: true
+            one-elf-section-per-function: true
+            optimization: level-0
+            warnings: all-warnings
+          global:
+            output-debug-info: enable
+            use-microLIB: true
+          linker:
+            $outputTaskExcludes:
+              - .bin
+            output-format: elf
+            ro-base: "0x08000000"
+            rw-base: "0x20000000"
+            xo-base: ""
+        scatterFilePath: ""
+        storageLayout:
+          RAM:
+            - id: 1
+              isChecked: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              noInit: false
+              tag: RAM
+            - id: 2
+              isChecked: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              noInit: false
+              tag: RAM
+            - id: 3
+              isChecked: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              noInit: false
+              tag: RAM
+            - id: 1
+              isChecked: true
+              mem:
+                size: "0x20000"
+                startAddr: "0x20000000"
+              noInit: false
+              tag: IRAM
+            - id: 2
+              isChecked: false
+              mem:
+                size: "0x10000"
+                startAddr: "0x10000000"
+              noInit: false
+              tag: IRAM
+          ROM:
+            - id: 1
+              isChecked: false
+              isStartup: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              tag: ROM
+            - id: 2
+              isChecked: false
+              isStartup: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              tag: ROM
+            - id: 3
+              isChecked: false
+              isStartup: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              tag: ROM
+            - id: 1
+              isChecked: true
+              isStartup: true
+              mem:
+                size: "0x100000"
+                startAddr: "0x8000000"
+              tag: IROM
+            - id: 2
+              isChecked: false
+              isStartup: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              tag: IROM
+        useCustomScatterFile: false
+    uploadConfigMap:
+      JLink:
+        baseAddr: ""
+        bin: ""
+        cpuInfo:
+          cpuName: GD32F405RGT6
+          vendor: GigaDevice
+        otherCmds: ""
+        proType: 1
+        speed: 4000
+      STLink:
+        address: "0x8000000"
+        bin: ""
+        elFile: None
+        optionBytes: .eide/target 1.st.option.bytes.ini
+        otherCmds: ""
+        proType: SWD
+        resetMode: default
+        runAfterProgram: true
+        speed: 4000
+    uploader: JLink

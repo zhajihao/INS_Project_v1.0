@@ -1,0 +1,1796 @@
+Dependencies for Project 'template', Target 'Target 1': (DO NOT MODIFY !)
+CompilerVersion: 5060960::V5.06 update 7 (build 960)::.\ARMCC
+F (..\CMSIS\system_gd32f4xx.c)(0x6AA7574E)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections -I ..\CMSIS -I ..\Library\Include -I ..\User -I ..\Peripheral\UART -I ..\Peripheral\SYS -I ..\Peripheral\Timer -I ..\Peripheral\SPI -I ..\Peripheral\EXTI -I ..\Peripheral\I2C -I ..\Navi -I ..\Navi\navi_config -I ..\Navi\navi_core -I ..\Navi\navi_math -I ..\Navi\navi_kalman -I ..\Navi\navi_kalman\kalman15d -I ..\Navi\navi_compensation-ID:\Users\20809\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.4.0\Device\F4XX\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DGD32F405 -DGD32F405 -D__FPU_PRESENT-o .\objects\system_gd32f4xx.o --omf_browse .\objects\system_gd32f4xx.crf --depend .\objects\system_gd32f4xx.d)
+I (..\CMSIS\gd32f4xx.h)(0x6AA75243)
+I (..\CMSIS\core_cm4.h)(0x5BF4B8AE)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\CMSIS\core_cmInstr.h)(0x5BF4B8AF)
+I (..\CMSIS\core_cmFunc.h)(0x5BF4B8AE)
+I (..\CMSIS\core_cm4_simd.h)(0x5BF4B8AF)
+I (..\CMSIS\system_gd32f4xx.h)(0x5BF4B8AF)
+I (..\User\gd32f4xx_libopt.h)(0x5F6842F3)
+I (..\Library\Include\gd32f4xx_rcu.h)(0x6AA757B9)
+I (..\Library\Include\gd32f4xx_adc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_can.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_crc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_ctc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dac.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dbg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dci.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dma.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_exti.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_fmc.h)(0x5F913EBD)
+I (..\Library\Include\gd32f4xx_fwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_gpio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_syscfg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_i2c.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_iref.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_pmu.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_rtc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_sdio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_spi.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_timer.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_trng.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_usart.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_wwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_misc.h)(0x5F6842F6)
+F (..\CMSIS\gd32f4xx.h)(0x6AA75243)()
+F (..\Startup\startup_gd32f405.s)(0x6AE04DD4)(--cpu Cortex-M4.fp.sp -g --apcs=interwork --pd "__MICROLIB SETA 1"-ID:\Users\20809\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.4.0\Device\F4XX\Include-ID:\Keil_v5\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 533" --pd "GD32F405 SETA 1"--list .\listings\startup_gd32f405.lst --xref -o .\objects\startup_gd32f405.o --depend .\objects\startup_gd32f405.d)
+F (..\Library\Source\gd32f4xx_adc.c)(0x5F7027C3)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections -I ..\CMSIS -I ..\Library\Include -I ..\User -I ..\Peripheral\UART -I ..\Peripheral\SYS -I ..\Peripheral\Timer -I ..\Peripheral\SPI -I ..\Peripheral\EXTI -I ..\Peripheral\I2C -I ..\Navi -I ..\Navi\navi_config -I ..\Navi\navi_core -I ..\Navi\navi_math -I ..\Navi\navi_kalman -I ..\Navi\navi_kalman\kalman15d -I ..\Navi\navi_compensation-ID:\Users\20809\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.4.0\Device\F4XX\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DGD32F405 -DGD32F405 -D__FPU_PRESENT-o .\objects\gd32f4xx_adc.o --omf_browse .\objects\gd32f4xx_adc.crf --depend .\objects\gd32f4xx_adc.d)
+I (..\Library\Include\gd32f4xx_adc.h)(0x5F6842F6)
+I (..\CMSIS\gd32f4xx.h)(0x6AA75243)
+I (..\CMSIS\core_cm4.h)(0x5BF4B8AE)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\CMSIS\core_cmInstr.h)(0x5BF4B8AF)
+I (..\CMSIS\core_cmFunc.h)(0x5BF4B8AE)
+I (..\CMSIS\core_cm4_simd.h)(0x5BF4B8AF)
+I (..\CMSIS\system_gd32f4xx.h)(0x5BF4B8AF)
+I (..\User\gd32f4xx_libopt.h)(0x5F6842F3)
+I (..\Library\Include\gd32f4xx_rcu.h)(0x6AA757B9)
+I (..\Library\Include\gd32f4xx_can.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_crc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_ctc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dac.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dbg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dci.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dma.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_exti.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_fmc.h)(0x5F913EBD)
+I (..\Library\Include\gd32f4xx_fwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_gpio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_syscfg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_i2c.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_iref.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_pmu.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_rtc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_sdio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_spi.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_timer.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_trng.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_usart.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_wwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_misc.h)(0x5F6842F6)
+F (..\Library\Source\gd32f4xx_can.c)(0x5F7027C3)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections -I ..\CMSIS -I ..\Library\Include -I ..\User -I ..\Peripheral\UART -I ..\Peripheral\SYS -I ..\Peripheral\Timer -I ..\Peripheral\SPI -I ..\Peripheral\EXTI -I ..\Peripheral\I2C -I ..\Navi -I ..\Navi\navi_config -I ..\Navi\navi_core -I ..\Navi\navi_math -I ..\Navi\navi_kalman -I ..\Navi\navi_kalman\kalman15d -I ..\Navi\navi_compensation-ID:\Users\20809\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.4.0\Device\F4XX\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DGD32F405 -DGD32F405 -D__FPU_PRESENT-o .\objects\gd32f4xx_can.o --omf_browse .\objects\gd32f4xx_can.crf --depend .\objects\gd32f4xx_can.d)
+I (..\Library\Include\gd32f4xx_can.h)(0x5F6842F6)
+I (..\CMSIS\gd32f4xx.h)(0x6AA75243)
+I (..\CMSIS\core_cm4.h)(0x5BF4B8AE)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\CMSIS\core_cmInstr.h)(0x5BF4B8AF)
+I (..\CMSIS\core_cmFunc.h)(0x5BF4B8AE)
+I (..\CMSIS\core_cm4_simd.h)(0x5BF4B8AF)
+I (..\CMSIS\system_gd32f4xx.h)(0x5BF4B8AF)
+I (..\User\gd32f4xx_libopt.h)(0x5F6842F3)
+I (..\Library\Include\gd32f4xx_rcu.h)(0x6AA757B9)
+I (..\Library\Include\gd32f4xx_adc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_crc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_ctc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dac.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dbg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dci.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dma.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_exti.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_fmc.h)(0x5F913EBD)
+I (..\Library\Include\gd32f4xx_fwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_gpio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_syscfg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_i2c.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_iref.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_pmu.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_rtc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_sdio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_spi.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_timer.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_trng.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_usart.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_wwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_misc.h)(0x5F6842F6)
+F (..\Library\Source\gd32f4xx_crc.c)(0x5F7027C3)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections -I ..\CMSIS -I ..\Library\Include -I ..\User -I ..\Peripheral\UART -I ..\Peripheral\SYS -I ..\Peripheral\Timer -I ..\Peripheral\SPI -I ..\Peripheral\EXTI -I ..\Peripheral\I2C -I ..\Navi -I ..\Navi\navi_config -I ..\Navi\navi_core -I ..\Navi\navi_math -I ..\Navi\navi_kalman -I ..\Navi\navi_kalman\kalman15d -I ..\Navi\navi_compensation-ID:\Users\20809\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.4.0\Device\F4XX\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DGD32F405 -DGD32F405 -D__FPU_PRESENT-o .\objects\gd32f4xx_crc.o --omf_browse .\objects\gd32f4xx_crc.crf --depend .\objects\gd32f4xx_crc.d)
+I (..\Library\Include\gd32f4xx_crc.h)(0x5F6842F6)
+I (..\CMSIS\gd32f4xx.h)(0x6AA75243)
+I (..\CMSIS\core_cm4.h)(0x5BF4B8AE)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\CMSIS\core_cmInstr.h)(0x5BF4B8AF)
+I (..\CMSIS\core_cmFunc.h)(0x5BF4B8AE)
+I (..\CMSIS\core_cm4_simd.h)(0x5BF4B8AF)
+I (..\CMSIS\system_gd32f4xx.h)(0x5BF4B8AF)
+I (..\User\gd32f4xx_libopt.h)(0x5F6842F3)
+I (..\Library\Include\gd32f4xx_rcu.h)(0x6AA757B9)
+I (..\Library\Include\gd32f4xx_adc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_can.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_ctc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dac.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dbg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dci.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dma.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_exti.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_fmc.h)(0x5F913EBD)
+I (..\Library\Include\gd32f4xx_fwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_gpio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_syscfg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_i2c.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_iref.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_pmu.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_rtc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_sdio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_spi.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_timer.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_trng.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_usart.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_wwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_misc.h)(0x5F6842F6)
+F (..\Library\Source\gd32f4xx_ctc.c)(0x5F7027C3)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections -I ..\CMSIS -I ..\Library\Include -I ..\User -I ..\Peripheral\UART -I ..\Peripheral\SYS -I ..\Peripheral\Timer -I ..\Peripheral\SPI -I ..\Peripheral\EXTI -I ..\Peripheral\I2C -I ..\Navi -I ..\Navi\navi_config -I ..\Navi\navi_core -I ..\Navi\navi_math -I ..\Navi\navi_kalman -I ..\Navi\navi_kalman\kalman15d -I ..\Navi\navi_compensation-ID:\Users\20809\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.4.0\Device\F4XX\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DGD32F405 -DGD32F405 -D__FPU_PRESENT-o .\objects\gd32f4xx_ctc.o --omf_browse .\objects\gd32f4xx_ctc.crf --depend .\objects\gd32f4xx_ctc.d)
+I (..\Library\Include\gd32f4xx_ctc.h)(0x5F6842F6)
+I (..\CMSIS\gd32f4xx.h)(0x6AA75243)
+I (..\CMSIS\core_cm4.h)(0x5BF4B8AE)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\CMSIS\core_cmInstr.h)(0x5BF4B8AF)
+I (..\CMSIS\core_cmFunc.h)(0x5BF4B8AE)
+I (..\CMSIS\core_cm4_simd.h)(0x5BF4B8AF)
+I (..\CMSIS\system_gd32f4xx.h)(0x5BF4B8AF)
+I (..\User\gd32f4xx_libopt.h)(0x5F6842F3)
+I (..\Library\Include\gd32f4xx_rcu.h)(0x6AA757B9)
+I (..\Library\Include\gd32f4xx_adc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_can.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_crc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dac.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dbg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dci.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dma.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_exti.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_fmc.h)(0x5F913EBD)
+I (..\Library\Include\gd32f4xx_fwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_gpio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_syscfg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_i2c.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_iref.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_pmu.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_rtc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_sdio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_spi.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_timer.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_trng.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_usart.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_wwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_misc.h)(0x5F6842F6)
+F (..\Library\Source\gd32f4xx_dac.c)(0x5F7027C3)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections -I ..\CMSIS -I ..\Library\Include -I ..\User -I ..\Peripheral\UART -I ..\Peripheral\SYS -I ..\Peripheral\Timer -I ..\Peripheral\SPI -I ..\Peripheral\EXTI -I ..\Peripheral\I2C -I ..\Navi -I ..\Navi\navi_config -I ..\Navi\navi_core -I ..\Navi\navi_math -I ..\Navi\navi_kalman -I ..\Navi\navi_kalman\kalman15d -I ..\Navi\navi_compensation-ID:\Users\20809\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.4.0\Device\F4XX\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DGD32F405 -DGD32F405 -D__FPU_PRESENT-o .\objects\gd32f4xx_dac.o --omf_browse .\objects\gd32f4xx_dac.crf --depend .\objects\gd32f4xx_dac.d)
+I (..\Library\Include\gd32f4xx_dac.h)(0x5F6842F6)
+I (..\CMSIS\gd32f4xx.h)(0x6AA75243)
+I (..\CMSIS\core_cm4.h)(0x5BF4B8AE)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\CMSIS\core_cmInstr.h)(0x5BF4B8AF)
+I (..\CMSIS\core_cmFunc.h)(0x5BF4B8AE)
+I (..\CMSIS\core_cm4_simd.h)(0x5BF4B8AF)
+I (..\CMSIS\system_gd32f4xx.h)(0x5BF4B8AF)
+I (..\User\gd32f4xx_libopt.h)(0x5F6842F3)
+I (..\Library\Include\gd32f4xx_rcu.h)(0x6AA757B9)
+I (..\Library\Include\gd32f4xx_adc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_can.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_crc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_ctc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dbg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dci.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dma.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_exti.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_fmc.h)(0x5F913EBD)
+I (..\Library\Include\gd32f4xx_fwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_gpio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_syscfg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_i2c.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_iref.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_pmu.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_rtc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_sdio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_spi.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_timer.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_trng.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_usart.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_wwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_misc.h)(0x5F6842F6)
+F (..\Library\Source\gd32f4xx_dbg.c)(0x5F7027C3)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections -I ..\CMSIS -I ..\Library\Include -I ..\User -I ..\Peripheral\UART -I ..\Peripheral\SYS -I ..\Peripheral\Timer -I ..\Peripheral\SPI -I ..\Peripheral\EXTI -I ..\Peripheral\I2C -I ..\Navi -I ..\Navi\navi_config -I ..\Navi\navi_core -I ..\Navi\navi_math -I ..\Navi\navi_kalman -I ..\Navi\navi_kalman\kalman15d -I ..\Navi\navi_compensation-ID:\Users\20809\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.4.0\Device\F4XX\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DGD32F405 -DGD32F405 -D__FPU_PRESENT-o .\objects\gd32f4xx_dbg.o --omf_browse .\objects\gd32f4xx_dbg.crf --depend .\objects\gd32f4xx_dbg.d)
+I (..\Library\Include\gd32f4xx_dbg.h)(0x5F6842F6)
+I (..\CMSIS\gd32f4xx.h)(0x6AA75243)
+I (..\CMSIS\core_cm4.h)(0x5BF4B8AE)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\CMSIS\core_cmInstr.h)(0x5BF4B8AF)
+I (..\CMSIS\core_cmFunc.h)(0x5BF4B8AE)
+I (..\CMSIS\core_cm4_simd.h)(0x5BF4B8AF)
+I (..\CMSIS\system_gd32f4xx.h)(0x5BF4B8AF)
+I (..\User\gd32f4xx_libopt.h)(0x5F6842F3)
+I (..\Library\Include\gd32f4xx_rcu.h)(0x6AA757B9)
+I (..\Library\Include\gd32f4xx_adc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_can.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_crc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_ctc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dac.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dci.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dma.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_exti.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_fmc.h)(0x5F913EBD)
+I (..\Library\Include\gd32f4xx_fwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_gpio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_syscfg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_i2c.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_iref.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_pmu.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_rtc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_sdio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_spi.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_timer.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_trng.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_usart.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_wwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_misc.h)(0x5F6842F6)
+F (..\Library\Source\gd32f4xx_dci.c)(0x5F7027C3)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections -I ..\CMSIS -I ..\Library\Include -I ..\User -I ..\Peripheral\UART -I ..\Peripheral\SYS -I ..\Peripheral\Timer -I ..\Peripheral\SPI -I ..\Peripheral\EXTI -I ..\Peripheral\I2C -I ..\Navi -I ..\Navi\navi_config -I ..\Navi\navi_core -I ..\Navi\navi_math -I ..\Navi\navi_kalman -I ..\Navi\navi_kalman\kalman15d -I ..\Navi\navi_compensation-ID:\Users\20809\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.4.0\Device\F4XX\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DGD32F405 -DGD32F405 -D__FPU_PRESENT-o .\objects\gd32f4xx_dci.o --omf_browse .\objects\gd32f4xx_dci.crf --depend .\objects\gd32f4xx_dci.d)
+I (..\Library\Include\gd32f4xx_dci.h)(0x5F6842F6)
+I (..\CMSIS\gd32f4xx.h)(0x6AA75243)
+I (..\CMSIS\core_cm4.h)(0x5BF4B8AE)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\CMSIS\core_cmInstr.h)(0x5BF4B8AF)
+I (..\CMSIS\core_cmFunc.h)(0x5BF4B8AE)
+I (..\CMSIS\core_cm4_simd.h)(0x5BF4B8AF)
+I (..\CMSIS\system_gd32f4xx.h)(0x5BF4B8AF)
+I (..\User\gd32f4xx_libopt.h)(0x5F6842F3)
+I (..\Library\Include\gd32f4xx_rcu.h)(0x6AA757B9)
+I (..\Library\Include\gd32f4xx_adc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_can.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_crc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_ctc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dac.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dbg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dma.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_exti.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_fmc.h)(0x5F913EBD)
+I (..\Library\Include\gd32f4xx_fwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_gpio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_syscfg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_i2c.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_iref.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_pmu.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_rtc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_sdio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_spi.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_timer.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_trng.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_usart.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_wwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_misc.h)(0x5F6842F6)
+F (..\Library\Source\gd32f4xx_dma.c)(0x6A9FC880)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections -I ..\CMSIS -I ..\Library\Include -I ..\User -I ..\Peripheral\UART -I ..\Peripheral\SYS -I ..\Peripheral\Timer -I ..\Peripheral\SPI -I ..\Peripheral\EXTI -I ..\Peripheral\I2C -I ..\Navi -I ..\Navi\navi_config -I ..\Navi\navi_core -I ..\Navi\navi_math -I ..\Navi\navi_kalman -I ..\Navi\navi_kalman\kalman15d -I ..\Navi\navi_compensation-ID:\Users\20809\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.4.0\Device\F4XX\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DGD32F405 -DGD32F405 -D__FPU_PRESENT-o .\objects\gd32f4xx_dma.o --omf_browse .\objects\gd32f4xx_dma.crf --depend .\objects\gd32f4xx_dma.d)
+I (..\Library\Include\gd32f4xx_dma.h)(0x5F6842F6)
+I (..\CMSIS\gd32f4xx.h)(0x6AA75243)
+I (..\CMSIS\core_cm4.h)(0x5BF4B8AE)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\CMSIS\core_cmInstr.h)(0x5BF4B8AF)
+I (..\CMSIS\core_cmFunc.h)(0x5BF4B8AE)
+I (..\CMSIS\core_cm4_simd.h)(0x5BF4B8AF)
+I (..\CMSIS\system_gd32f4xx.h)(0x5BF4B8AF)
+I (..\User\gd32f4xx_libopt.h)(0x5F6842F3)
+I (..\Library\Include\gd32f4xx_rcu.h)(0x6AA757B9)
+I (..\Library\Include\gd32f4xx_adc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_can.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_crc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_ctc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dac.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dbg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dci.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_exti.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_fmc.h)(0x5F913EBD)
+I (..\Library\Include\gd32f4xx_fwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_gpio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_syscfg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_i2c.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_iref.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_pmu.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_rtc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_sdio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_spi.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_timer.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_trng.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_usart.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_wwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_misc.h)(0x5F6842F6)
+F (..\Library\Source\gd32f4xx_enet.c)(0x5F7027C3)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections -I ..\CMSIS -I ..\Library\Include -I ..\User -I ..\Peripheral\UART -I ..\Peripheral\SYS -I ..\Peripheral\Timer -I ..\Peripheral\SPI -I ..\Peripheral\EXTI -I ..\Peripheral\I2C -I ..\Navi -I ..\Navi\navi_config -I ..\Navi\navi_core -I ..\Navi\navi_math -I ..\Navi\navi_kalman -I ..\Navi\navi_kalman\kalman15d -I ..\Navi\navi_compensation-ID:\Users\20809\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.4.0\Device\F4XX\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DGD32F405 -DGD32F405 -D__FPU_PRESENT-o .\objects\gd32f4xx_enet.o --omf_browse .\objects\gd32f4xx_enet.crf --depend .\objects\gd32f4xx_enet.d)
+I (..\Library\Include\gd32f4xx_enet.h)(0x5F6842F6)
+I (..\CMSIS\gd32f4xx.h)(0x6AA75243)
+I (..\CMSIS\core_cm4.h)(0x5BF4B8AE)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\CMSIS\core_cmInstr.h)(0x5BF4B8AF)
+I (..\CMSIS\core_cmFunc.h)(0x5BF4B8AE)
+I (..\CMSIS\core_cm4_simd.h)(0x5BF4B8AF)
+I (..\CMSIS\system_gd32f4xx.h)(0x5BF4B8AF)
+I (..\User\gd32f4xx_libopt.h)(0x5F6842F3)
+I (..\Library\Include\gd32f4xx_rcu.h)(0x6AA757B9)
+I (..\Library\Include\gd32f4xx_adc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_can.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_crc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_ctc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dac.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dbg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dci.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dma.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_exti.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_fmc.h)(0x5F913EBD)
+I (..\Library\Include\gd32f4xx_fwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_gpio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_syscfg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_i2c.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_iref.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_pmu.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_rtc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_sdio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_spi.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_timer.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_trng.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_usart.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_wwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_misc.h)(0x5F6842F6)
+I (D:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5E8E2EB2)
+F (..\Library\Source\gd32f4xx_exmc.c)(0x5F7027C3)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections -I ..\CMSIS -I ..\Library\Include -I ..\User -I ..\Peripheral\UART -I ..\Peripheral\SYS -I ..\Peripheral\Timer -I ..\Peripheral\SPI -I ..\Peripheral\EXTI -I ..\Peripheral\I2C -I ..\Navi -I ..\Navi\navi_config -I ..\Navi\navi_core -I ..\Navi\navi_math -I ..\Navi\navi_kalman -I ..\Navi\navi_kalman\kalman15d -I ..\Navi\navi_compensation-ID:\Users\20809\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.4.0\Device\F4XX\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DGD32F405 -DGD32F405 -D__FPU_PRESENT-o .\objects\gd32f4xx_exmc.o --omf_browse .\objects\gd32f4xx_exmc.crf --depend .\objects\gd32f4xx_exmc.d)
+I (..\Library\Include\gd32f4xx_exmc.h)(0x5F6842F6)
+I (..\CMSIS\gd32f4xx.h)(0x6AA75243)
+I (..\CMSIS\core_cm4.h)(0x5BF4B8AE)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\CMSIS\core_cmInstr.h)(0x5BF4B8AF)
+I (..\CMSIS\core_cmFunc.h)(0x5BF4B8AE)
+I (..\CMSIS\core_cm4_simd.h)(0x5BF4B8AF)
+I (..\CMSIS\system_gd32f4xx.h)(0x5BF4B8AF)
+I (..\User\gd32f4xx_libopt.h)(0x5F6842F3)
+I (..\Library\Include\gd32f4xx_rcu.h)(0x6AA757B9)
+I (..\Library\Include\gd32f4xx_adc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_can.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_crc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_ctc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dac.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dbg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dci.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dma.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_exti.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_fmc.h)(0x5F913EBD)
+I (..\Library\Include\gd32f4xx_fwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_gpio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_syscfg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_i2c.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_iref.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_pmu.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_rtc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_sdio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_spi.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_timer.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_trng.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_usart.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_wwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_misc.h)(0x5F6842F6)
+F (..\Library\Source\gd32f4xx_exti.c)(0x5F7027C3)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections -I ..\CMSIS -I ..\Library\Include -I ..\User -I ..\Peripheral\UART -I ..\Peripheral\SYS -I ..\Peripheral\Timer -I ..\Peripheral\SPI -I ..\Peripheral\EXTI -I ..\Peripheral\I2C -I ..\Navi -I ..\Navi\navi_config -I ..\Navi\navi_core -I ..\Navi\navi_math -I ..\Navi\navi_kalman -I ..\Navi\navi_kalman\kalman15d -I ..\Navi\navi_compensation-ID:\Users\20809\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.4.0\Device\F4XX\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DGD32F405 -DGD32F405 -D__FPU_PRESENT-o .\objects\gd32f4xx_exti.o --omf_browse .\objects\gd32f4xx_exti.crf --depend .\objects\gd32f4xx_exti.d)
+I (..\Library\Include\gd32f4xx_exti.h)(0x5F6842F6)
+I (..\CMSIS\gd32f4xx.h)(0x6AA75243)
+I (..\CMSIS\core_cm4.h)(0x5BF4B8AE)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\CMSIS\core_cmInstr.h)(0x5BF4B8AF)
+I (..\CMSIS\core_cmFunc.h)(0x5BF4B8AE)
+I (..\CMSIS\core_cm4_simd.h)(0x5BF4B8AF)
+I (..\CMSIS\system_gd32f4xx.h)(0x5BF4B8AF)
+I (..\User\gd32f4xx_libopt.h)(0x5F6842F3)
+I (..\Library\Include\gd32f4xx_rcu.h)(0x6AA757B9)
+I (..\Library\Include\gd32f4xx_adc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_can.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_crc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_ctc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dac.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dbg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dci.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dma.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_fmc.h)(0x5F913EBD)
+I (..\Library\Include\gd32f4xx_fwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_gpio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_syscfg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_i2c.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_iref.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_pmu.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_rtc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_sdio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_spi.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_timer.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_trng.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_usart.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_wwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_misc.h)(0x5F6842F6)
+F (..\Library\Source\gd32f4xx_fmc.c)(0x5F913EBD)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections -I ..\CMSIS -I ..\Library\Include -I ..\User -I ..\Peripheral\UART -I ..\Peripheral\SYS -I ..\Peripheral\Timer -I ..\Peripheral\SPI -I ..\Peripheral\EXTI -I ..\Peripheral\I2C -I ..\Navi -I ..\Navi\navi_config -I ..\Navi\navi_core -I ..\Navi\navi_math -I ..\Navi\navi_kalman -I ..\Navi\navi_kalman\kalman15d -I ..\Navi\navi_compensation-ID:\Users\20809\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.4.0\Device\F4XX\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DGD32F405 -DGD32F405 -D__FPU_PRESENT-o .\objects\gd32f4xx_fmc.o --omf_browse .\objects\gd32f4xx_fmc.crf --depend .\objects\gd32f4xx_fmc.d)
+I (..\Library\Include\gd32f4xx_fmc.h)(0x5F913EBD)
+I (..\CMSIS\gd32f4xx.h)(0x6AA75243)
+I (..\CMSIS\core_cm4.h)(0x5BF4B8AE)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\CMSIS\core_cmInstr.h)(0x5BF4B8AF)
+I (..\CMSIS\core_cmFunc.h)(0x5BF4B8AE)
+I (..\CMSIS\core_cm4_simd.h)(0x5BF4B8AF)
+I (..\CMSIS\system_gd32f4xx.h)(0x5BF4B8AF)
+I (..\User\gd32f4xx_libopt.h)(0x5F6842F3)
+I (..\Library\Include\gd32f4xx_rcu.h)(0x6AA757B9)
+I (..\Library\Include\gd32f4xx_adc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_can.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_crc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_ctc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dac.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dbg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dci.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dma.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_exti.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_fwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_gpio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_syscfg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_i2c.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_iref.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_pmu.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_rtc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_sdio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_spi.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_timer.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_trng.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_usart.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_wwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_misc.h)(0x5F6842F6)
+F (..\Library\Source\gd32f4xx_fwdgt.c)(0x5F7027C3)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections -I ..\CMSIS -I ..\Library\Include -I ..\User -I ..\Peripheral\UART -I ..\Peripheral\SYS -I ..\Peripheral\Timer -I ..\Peripheral\SPI -I ..\Peripheral\EXTI -I ..\Peripheral\I2C -I ..\Navi -I ..\Navi\navi_config -I ..\Navi\navi_core -I ..\Navi\navi_math -I ..\Navi\navi_kalman -I ..\Navi\navi_kalman\kalman15d -I ..\Navi\navi_compensation-ID:\Users\20809\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.4.0\Device\F4XX\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DGD32F405 -DGD32F405 -D__FPU_PRESENT-o .\objects\gd32f4xx_fwdgt.o --omf_browse .\objects\gd32f4xx_fwdgt.crf --depend .\objects\gd32f4xx_fwdgt.d)
+I (..\Library\Include\gd32f4xx_fwdgt.h)(0x5F6842F6)
+I (..\CMSIS\gd32f4xx.h)(0x6AA75243)
+I (..\CMSIS\core_cm4.h)(0x5BF4B8AE)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\CMSIS\core_cmInstr.h)(0x5BF4B8AF)
+I (..\CMSIS\core_cmFunc.h)(0x5BF4B8AE)
+I (..\CMSIS\core_cm4_simd.h)(0x5BF4B8AF)
+I (..\CMSIS\system_gd32f4xx.h)(0x5BF4B8AF)
+I (..\User\gd32f4xx_libopt.h)(0x5F6842F3)
+I (..\Library\Include\gd32f4xx_rcu.h)(0x6AA757B9)
+I (..\Library\Include\gd32f4xx_adc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_can.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_crc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_ctc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dac.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dbg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dci.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dma.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_exti.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_fmc.h)(0x5F913EBD)
+I (..\Library\Include\gd32f4xx_gpio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_syscfg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_i2c.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_iref.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_pmu.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_rtc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_sdio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_spi.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_timer.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_trng.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_usart.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_wwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_misc.h)(0x5F6842F6)
+F (..\Library\Source\gd32f4xx_gpio.c)(0x5F7027C3)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections -I ..\CMSIS -I ..\Library\Include -I ..\User -I ..\Peripheral\UART -I ..\Peripheral\SYS -I ..\Peripheral\Timer -I ..\Peripheral\SPI -I ..\Peripheral\EXTI -I ..\Peripheral\I2C -I ..\Navi -I ..\Navi\navi_config -I ..\Navi\navi_core -I ..\Navi\navi_math -I ..\Navi\navi_kalman -I ..\Navi\navi_kalman\kalman15d -I ..\Navi\navi_compensation-ID:\Users\20809\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.4.0\Device\F4XX\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DGD32F405 -DGD32F405 -D__FPU_PRESENT-o .\objects\gd32f4xx_gpio.o --omf_browse .\objects\gd32f4xx_gpio.crf --depend .\objects\gd32f4xx_gpio.d)
+I (..\Library\Include\gd32f4xx_gpio.h)(0x5F6842F6)
+I (..\CMSIS\gd32f4xx.h)(0x6AA75243)
+I (..\CMSIS\core_cm4.h)(0x5BF4B8AE)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\CMSIS\core_cmInstr.h)(0x5BF4B8AF)
+I (..\CMSIS\core_cmFunc.h)(0x5BF4B8AE)
+I (..\CMSIS\core_cm4_simd.h)(0x5BF4B8AF)
+I (..\CMSIS\system_gd32f4xx.h)(0x5BF4B8AF)
+I (..\User\gd32f4xx_libopt.h)(0x5F6842F3)
+I (..\Library\Include\gd32f4xx_rcu.h)(0x6AA757B9)
+I (..\Library\Include\gd32f4xx_adc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_can.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_crc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_ctc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dac.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dbg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dci.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dma.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_exti.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_fmc.h)(0x5F913EBD)
+I (..\Library\Include\gd32f4xx_fwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_syscfg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_i2c.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_iref.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_pmu.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_rtc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_sdio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_spi.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_timer.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_trng.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_usart.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_wwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_misc.h)(0x5F6842F6)
+F (..\Library\Source\gd32f4xx_i2c.c)(0x5F7027C3)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections -I ..\CMSIS -I ..\Library\Include -I ..\User -I ..\Peripheral\UART -I ..\Peripheral\SYS -I ..\Peripheral\Timer -I ..\Peripheral\SPI -I ..\Peripheral\EXTI -I ..\Peripheral\I2C -I ..\Navi -I ..\Navi\navi_config -I ..\Navi\navi_core -I ..\Navi\navi_math -I ..\Navi\navi_kalman -I ..\Navi\navi_kalman\kalman15d -I ..\Navi\navi_compensation-ID:\Users\20809\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.4.0\Device\F4XX\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DGD32F405 -DGD32F405 -D__FPU_PRESENT-o .\objects\gd32f4xx_i2c.o --omf_browse .\objects\gd32f4xx_i2c.crf --depend .\objects\gd32f4xx_i2c.d)
+I (..\Library\Include\gd32f4xx_i2c.h)(0x5F6842F6)
+I (..\CMSIS\gd32f4xx.h)(0x6AA75243)
+I (..\CMSIS\core_cm4.h)(0x5BF4B8AE)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\CMSIS\core_cmInstr.h)(0x5BF4B8AF)
+I (..\CMSIS\core_cmFunc.h)(0x5BF4B8AE)
+I (..\CMSIS\core_cm4_simd.h)(0x5BF4B8AF)
+I (..\CMSIS\system_gd32f4xx.h)(0x5BF4B8AF)
+I (..\User\gd32f4xx_libopt.h)(0x5F6842F3)
+I (..\Library\Include\gd32f4xx_rcu.h)(0x6AA757B9)
+I (..\Library\Include\gd32f4xx_adc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_can.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_crc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_ctc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dac.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dbg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dci.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dma.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_exti.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_fmc.h)(0x5F913EBD)
+I (..\Library\Include\gd32f4xx_fwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_gpio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_syscfg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_iref.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_pmu.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_rtc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_sdio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_spi.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_timer.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_trng.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_usart.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_wwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_misc.h)(0x5F6842F6)
+F (..\Library\Source\gd32f4xx_ipa.c)(0x5F7027C3)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections -I ..\CMSIS -I ..\Library\Include -I ..\User -I ..\Peripheral\UART -I ..\Peripheral\SYS -I ..\Peripheral\Timer -I ..\Peripheral\SPI -I ..\Peripheral\EXTI -I ..\Peripheral\I2C -I ..\Navi -I ..\Navi\navi_config -I ..\Navi\navi_core -I ..\Navi\navi_math -I ..\Navi\navi_kalman -I ..\Navi\navi_kalman\kalman15d -I ..\Navi\navi_compensation-ID:\Users\20809\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.4.0\Device\F4XX\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DGD32F405 -DGD32F405 -D__FPU_PRESENT-o .\objects\gd32f4xx_ipa.o --omf_browse .\objects\gd32f4xx_ipa.crf --depend .\objects\gd32f4xx_ipa.d)
+I (..\Library\Include\gd32f4xx_ipa.h)(0x5F6842F6)
+I (..\CMSIS\gd32f4xx.h)(0x6AA75243)
+I (..\CMSIS\core_cm4.h)(0x5BF4B8AE)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\CMSIS\core_cmInstr.h)(0x5BF4B8AF)
+I (..\CMSIS\core_cmFunc.h)(0x5BF4B8AE)
+I (..\CMSIS\core_cm4_simd.h)(0x5BF4B8AF)
+I (..\CMSIS\system_gd32f4xx.h)(0x5BF4B8AF)
+I (..\User\gd32f4xx_libopt.h)(0x5F6842F3)
+I (..\Library\Include\gd32f4xx_rcu.h)(0x6AA757B9)
+I (..\Library\Include\gd32f4xx_adc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_can.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_crc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_ctc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dac.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dbg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dci.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dma.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_exti.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_fmc.h)(0x5F913EBD)
+I (..\Library\Include\gd32f4xx_fwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_gpio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_syscfg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_i2c.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_iref.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_pmu.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_rtc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_sdio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_spi.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_timer.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_trng.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_usart.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_wwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_misc.h)(0x5F6842F6)
+F (..\Library\Source\gd32f4xx_iref.c)(0x5F7027C3)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections -I ..\CMSIS -I ..\Library\Include -I ..\User -I ..\Peripheral\UART -I ..\Peripheral\SYS -I ..\Peripheral\Timer -I ..\Peripheral\SPI -I ..\Peripheral\EXTI -I ..\Peripheral\I2C -I ..\Navi -I ..\Navi\navi_config -I ..\Navi\navi_core -I ..\Navi\navi_math -I ..\Navi\navi_kalman -I ..\Navi\navi_kalman\kalman15d -I ..\Navi\navi_compensation-ID:\Users\20809\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.4.0\Device\F4XX\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DGD32F405 -DGD32F405 -D__FPU_PRESENT-o .\objects\gd32f4xx_iref.o --omf_browse .\objects\gd32f4xx_iref.crf --depend .\objects\gd32f4xx_iref.d)
+I (..\Library\Include\gd32f4xx_iref.h)(0x5F6842F6)
+I (..\CMSIS\gd32f4xx.h)(0x6AA75243)
+I (..\CMSIS\core_cm4.h)(0x5BF4B8AE)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\CMSIS\core_cmInstr.h)(0x5BF4B8AF)
+I (..\CMSIS\core_cmFunc.h)(0x5BF4B8AE)
+I (..\CMSIS\core_cm4_simd.h)(0x5BF4B8AF)
+I (..\CMSIS\system_gd32f4xx.h)(0x5BF4B8AF)
+I (..\User\gd32f4xx_libopt.h)(0x5F6842F3)
+I (..\Library\Include\gd32f4xx_rcu.h)(0x6AA757B9)
+I (..\Library\Include\gd32f4xx_adc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_can.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_crc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_ctc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dac.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dbg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dci.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dma.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_exti.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_fmc.h)(0x5F913EBD)
+I (..\Library\Include\gd32f4xx_fwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_gpio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_syscfg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_i2c.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_pmu.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_rtc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_sdio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_spi.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_timer.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_trng.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_usart.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_wwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_misc.h)(0x5F6842F6)
+F (..\Library\Source\gd32f4xx_misc.c)(0x5F7027C3)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections -I ..\CMSIS -I ..\Library\Include -I ..\User -I ..\Peripheral\UART -I ..\Peripheral\SYS -I ..\Peripheral\Timer -I ..\Peripheral\SPI -I ..\Peripheral\EXTI -I ..\Peripheral\I2C -I ..\Navi -I ..\Navi\navi_config -I ..\Navi\navi_core -I ..\Navi\navi_math -I ..\Navi\navi_kalman -I ..\Navi\navi_kalman\kalman15d -I ..\Navi\navi_compensation-ID:\Users\20809\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.4.0\Device\F4XX\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DGD32F405 -DGD32F405 -D__FPU_PRESENT-o .\objects\gd32f4xx_misc.o --omf_browse .\objects\gd32f4xx_misc.crf --depend .\objects\gd32f4xx_misc.d)
+I (..\Library\Include\gd32f4xx_misc.h)(0x5F6842F6)
+I (..\CMSIS\gd32f4xx.h)(0x6AA75243)
+I (..\CMSIS\core_cm4.h)(0x5BF4B8AE)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\CMSIS\core_cmInstr.h)(0x5BF4B8AF)
+I (..\CMSIS\core_cmFunc.h)(0x5BF4B8AE)
+I (..\CMSIS\core_cm4_simd.h)(0x5BF4B8AF)
+I (..\CMSIS\system_gd32f4xx.h)(0x5BF4B8AF)
+I (..\User\gd32f4xx_libopt.h)(0x5F6842F3)
+I (..\Library\Include\gd32f4xx_rcu.h)(0x6AA757B9)
+I (..\Library\Include\gd32f4xx_adc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_can.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_crc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_ctc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dac.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dbg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dci.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dma.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_exti.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_fmc.h)(0x5F913EBD)
+I (..\Library\Include\gd32f4xx_fwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_gpio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_syscfg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_i2c.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_iref.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_pmu.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_rtc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_sdio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_spi.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_timer.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_trng.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_usart.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_wwdgt.h)(0x5F6842F6)
+F (..\Library\Source\gd32f4xx_pmu.c)(0x5F7027C3)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections -I ..\CMSIS -I ..\Library\Include -I ..\User -I ..\Peripheral\UART -I ..\Peripheral\SYS -I ..\Peripheral\Timer -I ..\Peripheral\SPI -I ..\Peripheral\EXTI -I ..\Peripheral\I2C -I ..\Navi -I ..\Navi\navi_config -I ..\Navi\navi_core -I ..\Navi\navi_math -I ..\Navi\navi_kalman -I ..\Navi\navi_kalman\kalman15d -I ..\Navi\navi_compensation-ID:\Users\20809\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.4.0\Device\F4XX\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DGD32F405 -DGD32F405 -D__FPU_PRESENT-o .\objects\gd32f4xx_pmu.o --omf_browse .\objects\gd32f4xx_pmu.crf --depend .\objects\gd32f4xx_pmu.d)
+I (..\Library\Include\gd32f4xx_pmu.h)(0x5F6842F6)
+I (..\CMSIS\gd32f4xx.h)(0x6AA75243)
+I (..\CMSIS\core_cm4.h)(0x5BF4B8AE)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\CMSIS\core_cmInstr.h)(0x5BF4B8AF)
+I (..\CMSIS\core_cmFunc.h)(0x5BF4B8AE)
+I (..\CMSIS\core_cm4_simd.h)(0x5BF4B8AF)
+I (..\CMSIS\system_gd32f4xx.h)(0x5BF4B8AF)
+I (..\User\gd32f4xx_libopt.h)(0x5F6842F3)
+I (..\Library\Include\gd32f4xx_rcu.h)(0x6AA757B9)
+I (..\Library\Include\gd32f4xx_adc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_can.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_crc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_ctc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dac.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dbg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dci.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dma.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_exti.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_fmc.h)(0x5F913EBD)
+I (..\Library\Include\gd32f4xx_fwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_gpio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_syscfg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_i2c.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_iref.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_rtc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_sdio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_spi.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_timer.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_trng.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_usart.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_wwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_misc.h)(0x5F6842F6)
+F (..\Library\Source\gd32f4xx_rcu.c)(0x6AA13093)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections -I ..\CMSIS -I ..\Library\Include -I ..\User -I ..\Peripheral\UART -I ..\Peripheral\SYS -I ..\Peripheral\Timer -I ..\Peripheral\SPI -I ..\Peripheral\EXTI -I ..\Peripheral\I2C -I ..\Navi -I ..\Navi\navi_config -I ..\Navi\navi_core -I ..\Navi\navi_math -I ..\Navi\navi_kalman -I ..\Navi\navi_kalman\kalman15d -I ..\Navi\navi_compensation-ID:\Users\20809\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.4.0\Device\F4XX\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DGD32F405 -DGD32F405 -D__FPU_PRESENT-o .\objects\gd32f4xx_rcu.o --omf_browse .\objects\gd32f4xx_rcu.crf --depend .\objects\gd32f4xx_rcu.d)
+I (..\Library\Include\gd32f4xx_rcu.h)(0x6AA757B9)
+I (..\CMSIS\gd32f4xx.h)(0x6AA75243)
+I (..\CMSIS\core_cm4.h)(0x5BF4B8AE)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\CMSIS\core_cmInstr.h)(0x5BF4B8AF)
+I (..\CMSIS\core_cmFunc.h)(0x5BF4B8AE)
+I (..\CMSIS\core_cm4_simd.h)(0x5BF4B8AF)
+I (..\CMSIS\system_gd32f4xx.h)(0x5BF4B8AF)
+I (..\User\gd32f4xx_libopt.h)(0x5F6842F3)
+I (..\Library\Include\gd32f4xx_adc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_can.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_crc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_ctc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dac.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dbg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dci.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dma.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_exti.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_fmc.h)(0x5F913EBD)
+I (..\Library\Include\gd32f4xx_fwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_gpio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_syscfg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_i2c.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_iref.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_pmu.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_rtc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_sdio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_spi.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_timer.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_trng.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_usart.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_wwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_misc.h)(0x5F6842F6)
+F (..\Library\Source\gd32f4xx_rtc.c)(0x5F7027C3)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections -I ..\CMSIS -I ..\Library\Include -I ..\User -I ..\Peripheral\UART -I ..\Peripheral\SYS -I ..\Peripheral\Timer -I ..\Peripheral\SPI -I ..\Peripheral\EXTI -I ..\Peripheral\I2C -I ..\Navi -I ..\Navi\navi_config -I ..\Navi\navi_core -I ..\Navi\navi_math -I ..\Navi\navi_kalman -I ..\Navi\navi_kalman\kalman15d -I ..\Navi\navi_compensation-ID:\Users\20809\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.4.0\Device\F4XX\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DGD32F405 -DGD32F405 -D__FPU_PRESENT-o .\objects\gd32f4xx_rtc.o --omf_browse .\objects\gd32f4xx_rtc.crf --depend .\objects\gd32f4xx_rtc.d)
+I (..\Library\Include\gd32f4xx_rtc.h)(0x5F6842F6)
+I (..\CMSIS\gd32f4xx.h)(0x6AA75243)
+I (..\CMSIS\core_cm4.h)(0x5BF4B8AE)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\CMSIS\core_cmInstr.h)(0x5BF4B8AF)
+I (..\CMSIS\core_cmFunc.h)(0x5BF4B8AE)
+I (..\CMSIS\core_cm4_simd.h)(0x5BF4B8AF)
+I (..\CMSIS\system_gd32f4xx.h)(0x5BF4B8AF)
+I (..\User\gd32f4xx_libopt.h)(0x5F6842F3)
+I (..\Library\Include\gd32f4xx_rcu.h)(0x6AA757B9)
+I (..\Library\Include\gd32f4xx_adc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_can.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_crc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_ctc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dac.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dbg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dci.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dma.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_exti.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_fmc.h)(0x5F913EBD)
+I (..\Library\Include\gd32f4xx_fwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_gpio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_syscfg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_i2c.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_iref.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_pmu.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_sdio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_spi.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_timer.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_trng.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_usart.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_wwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_misc.h)(0x5F6842F6)
+F (..\Library\Source\gd32f4xx_sdio.c)(0x5F7027C3)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections -I ..\CMSIS -I ..\Library\Include -I ..\User -I ..\Peripheral\UART -I ..\Peripheral\SYS -I ..\Peripheral\Timer -I ..\Peripheral\SPI -I ..\Peripheral\EXTI -I ..\Peripheral\I2C -I ..\Navi -I ..\Navi\navi_config -I ..\Navi\navi_core -I ..\Navi\navi_math -I ..\Navi\navi_kalman -I ..\Navi\navi_kalman\kalman15d -I ..\Navi\navi_compensation-ID:\Users\20809\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.4.0\Device\F4XX\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DGD32F405 -DGD32F405 -D__FPU_PRESENT-o .\objects\gd32f4xx_sdio.o --omf_browse .\objects\gd32f4xx_sdio.crf --depend .\objects\gd32f4xx_sdio.d)
+I (..\Library\Include\gd32f4xx_sdio.h)(0x5F6842F6)
+I (..\CMSIS\gd32f4xx.h)(0x6AA75243)
+I (..\CMSIS\core_cm4.h)(0x5BF4B8AE)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\CMSIS\core_cmInstr.h)(0x5BF4B8AF)
+I (..\CMSIS\core_cmFunc.h)(0x5BF4B8AE)
+I (..\CMSIS\core_cm4_simd.h)(0x5BF4B8AF)
+I (..\CMSIS\system_gd32f4xx.h)(0x5BF4B8AF)
+I (..\User\gd32f4xx_libopt.h)(0x5F6842F3)
+I (..\Library\Include\gd32f4xx_rcu.h)(0x6AA757B9)
+I (..\Library\Include\gd32f4xx_adc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_can.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_crc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_ctc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dac.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dbg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dci.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dma.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_exti.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_fmc.h)(0x5F913EBD)
+I (..\Library\Include\gd32f4xx_fwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_gpio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_syscfg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_i2c.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_iref.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_pmu.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_rtc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_spi.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_timer.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_trng.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_usart.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_wwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_misc.h)(0x5F6842F6)
+F (..\Library\Source\gd32f4xx_spi.c)(0x6A9FE3C6)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections -I ..\CMSIS -I ..\Library\Include -I ..\User -I ..\Peripheral\UART -I ..\Peripheral\SYS -I ..\Peripheral\Timer -I ..\Peripheral\SPI -I ..\Peripheral\EXTI -I ..\Peripheral\I2C -I ..\Navi -I ..\Navi\navi_config -I ..\Navi\navi_core -I ..\Navi\navi_math -I ..\Navi\navi_kalman -I ..\Navi\navi_kalman\kalman15d -I ..\Navi\navi_compensation-ID:\Users\20809\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.4.0\Device\F4XX\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DGD32F405 -DGD32F405 -D__FPU_PRESENT-o .\objects\gd32f4xx_spi.o --omf_browse .\objects\gd32f4xx_spi.crf --depend .\objects\gd32f4xx_spi.d)
+I (..\Library\Include\gd32f4xx_spi.h)(0x5F6842F6)
+I (..\CMSIS\gd32f4xx.h)(0x6AA75243)
+I (..\CMSIS\core_cm4.h)(0x5BF4B8AE)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\CMSIS\core_cmInstr.h)(0x5BF4B8AF)
+I (..\CMSIS\core_cmFunc.h)(0x5BF4B8AE)
+I (..\CMSIS\core_cm4_simd.h)(0x5BF4B8AF)
+I (..\CMSIS\system_gd32f4xx.h)(0x5BF4B8AF)
+I (..\User\gd32f4xx_libopt.h)(0x5F6842F3)
+I (..\Library\Include\gd32f4xx_rcu.h)(0x6AA757B9)
+I (..\Library\Include\gd32f4xx_adc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_can.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_crc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_ctc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dac.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dbg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dci.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dma.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_exti.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_fmc.h)(0x5F913EBD)
+I (..\Library\Include\gd32f4xx_fwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_gpio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_syscfg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_i2c.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_iref.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_pmu.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_rtc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_sdio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_timer.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_trng.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_usart.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_wwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_misc.h)(0x5F6842F6)
+F (..\Library\Source\gd32f4xx_syscfg.c)(0x5F7027C3)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections -I ..\CMSIS -I ..\Library\Include -I ..\User -I ..\Peripheral\UART -I ..\Peripheral\SYS -I ..\Peripheral\Timer -I ..\Peripheral\SPI -I ..\Peripheral\EXTI -I ..\Peripheral\I2C -I ..\Navi -I ..\Navi\navi_config -I ..\Navi\navi_core -I ..\Navi\navi_math -I ..\Navi\navi_kalman -I ..\Navi\navi_kalman\kalman15d -I ..\Navi\navi_compensation-ID:\Users\20809\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.4.0\Device\F4XX\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DGD32F405 -DGD32F405 -D__FPU_PRESENT-o .\objects\gd32f4xx_syscfg.o --omf_browse .\objects\gd32f4xx_syscfg.crf --depend .\objects\gd32f4xx_syscfg.d)
+I (..\Library\Include\gd32f4xx_syscfg.h)(0x5F6842F6)
+I (..\CMSIS\gd32f4xx.h)(0x6AA75243)
+I (..\CMSIS\core_cm4.h)(0x5BF4B8AE)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\CMSIS\core_cmInstr.h)(0x5BF4B8AF)
+I (..\CMSIS\core_cmFunc.h)(0x5BF4B8AE)
+I (..\CMSIS\core_cm4_simd.h)(0x5BF4B8AF)
+I (..\CMSIS\system_gd32f4xx.h)(0x5BF4B8AF)
+I (..\User\gd32f4xx_libopt.h)(0x5F6842F3)
+I (..\Library\Include\gd32f4xx_rcu.h)(0x6AA757B9)
+I (..\Library\Include\gd32f4xx_adc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_can.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_crc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_ctc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dac.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dbg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dci.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dma.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_exti.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_fmc.h)(0x5F913EBD)
+I (..\Library\Include\gd32f4xx_fwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_gpio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_i2c.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_iref.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_pmu.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_rtc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_sdio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_spi.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_timer.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_trng.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_usart.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_wwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_misc.h)(0x5F6842F6)
+F (..\Library\Source\gd32f4xx_timer.c)(0x5F7027C3)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections -I ..\CMSIS -I ..\Library\Include -I ..\User -I ..\Peripheral\UART -I ..\Peripheral\SYS -I ..\Peripheral\Timer -I ..\Peripheral\SPI -I ..\Peripheral\EXTI -I ..\Peripheral\I2C -I ..\Navi -I ..\Navi\navi_config -I ..\Navi\navi_core -I ..\Navi\navi_math -I ..\Navi\navi_kalman -I ..\Navi\navi_kalman\kalman15d -I ..\Navi\navi_compensation-ID:\Users\20809\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.4.0\Device\F4XX\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DGD32F405 -DGD32F405 -D__FPU_PRESENT-o .\objects\gd32f4xx_timer.o --omf_browse .\objects\gd32f4xx_timer.crf --depend .\objects\gd32f4xx_timer.d)
+I (..\Library\Include\gd32f4xx_timer.h)(0x5F6842F6)
+I (..\CMSIS\gd32f4xx.h)(0x6AA75243)
+I (..\CMSIS\core_cm4.h)(0x5BF4B8AE)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\CMSIS\core_cmInstr.h)(0x5BF4B8AF)
+I (..\CMSIS\core_cmFunc.h)(0x5BF4B8AE)
+I (..\CMSIS\core_cm4_simd.h)(0x5BF4B8AF)
+I (..\CMSIS\system_gd32f4xx.h)(0x5BF4B8AF)
+I (..\User\gd32f4xx_libopt.h)(0x5F6842F3)
+I (..\Library\Include\gd32f4xx_rcu.h)(0x6AA757B9)
+I (..\Library\Include\gd32f4xx_adc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_can.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_crc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_ctc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dac.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dbg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dci.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dma.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_exti.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_fmc.h)(0x5F913EBD)
+I (..\Library\Include\gd32f4xx_fwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_gpio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_syscfg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_i2c.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_iref.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_pmu.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_rtc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_sdio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_spi.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_trng.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_usart.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_wwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_misc.h)(0x5F6842F6)
+F (..\Library\Source\gd32f4xx_tli.c)(0x5F7027C3)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections -I ..\CMSIS -I ..\Library\Include -I ..\User -I ..\Peripheral\UART -I ..\Peripheral\SYS -I ..\Peripheral\Timer -I ..\Peripheral\SPI -I ..\Peripheral\EXTI -I ..\Peripheral\I2C -I ..\Navi -I ..\Navi\navi_config -I ..\Navi\navi_core -I ..\Navi\navi_math -I ..\Navi\navi_kalman -I ..\Navi\navi_kalman\kalman15d -I ..\Navi\navi_compensation-ID:\Users\20809\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.4.0\Device\F4XX\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DGD32F405 -DGD32F405 -D__FPU_PRESENT-o .\objects\gd32f4xx_tli.o --omf_browse .\objects\gd32f4xx_tli.crf --depend .\objects\gd32f4xx_tli.d)
+I (..\Library\Include\gd32f4xx_tli.h)(0x5F6842F6)
+I (..\CMSIS\gd32f4xx.h)(0x6AA75243)
+I (..\CMSIS\core_cm4.h)(0x5BF4B8AE)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\CMSIS\core_cmInstr.h)(0x5BF4B8AF)
+I (..\CMSIS\core_cmFunc.h)(0x5BF4B8AE)
+I (..\CMSIS\core_cm4_simd.h)(0x5BF4B8AF)
+I (..\CMSIS\system_gd32f4xx.h)(0x5BF4B8AF)
+I (..\User\gd32f4xx_libopt.h)(0x5F6842F3)
+I (..\Library\Include\gd32f4xx_rcu.h)(0x6AA757B9)
+I (..\Library\Include\gd32f4xx_adc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_can.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_crc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_ctc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dac.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dbg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dci.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dma.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_exti.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_fmc.h)(0x5F913EBD)
+I (..\Library\Include\gd32f4xx_fwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_gpio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_syscfg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_i2c.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_iref.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_pmu.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_rtc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_sdio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_spi.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_timer.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_trng.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_usart.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_wwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_misc.h)(0x5F6842F6)
+F (..\Library\Source\gd32f4xx_trng.c)(0x5F7027C3)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections -I ..\CMSIS -I ..\Library\Include -I ..\User -I ..\Peripheral\UART -I ..\Peripheral\SYS -I ..\Peripheral\Timer -I ..\Peripheral\SPI -I ..\Peripheral\EXTI -I ..\Peripheral\I2C -I ..\Navi -I ..\Navi\navi_config -I ..\Navi\navi_core -I ..\Navi\navi_math -I ..\Navi\navi_kalman -I ..\Navi\navi_kalman\kalman15d -I ..\Navi\navi_compensation-ID:\Users\20809\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.4.0\Device\F4XX\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DGD32F405 -DGD32F405 -D__FPU_PRESENT-o .\objects\gd32f4xx_trng.o --omf_browse .\objects\gd32f4xx_trng.crf --depend .\objects\gd32f4xx_trng.d)
+I (..\Library\Include\gd32f4xx_trng.h)(0x5F6842F6)
+I (..\CMSIS\gd32f4xx.h)(0x6AA75243)
+I (..\CMSIS\core_cm4.h)(0x5BF4B8AE)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\CMSIS\core_cmInstr.h)(0x5BF4B8AF)
+I (..\CMSIS\core_cmFunc.h)(0x5BF4B8AE)
+I (..\CMSIS\core_cm4_simd.h)(0x5BF4B8AF)
+I (..\CMSIS\system_gd32f4xx.h)(0x5BF4B8AF)
+I (..\User\gd32f4xx_libopt.h)(0x5F6842F3)
+I (..\Library\Include\gd32f4xx_rcu.h)(0x6AA757B9)
+I (..\Library\Include\gd32f4xx_adc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_can.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_crc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_ctc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dac.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dbg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dci.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dma.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_exti.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_fmc.h)(0x5F913EBD)
+I (..\Library\Include\gd32f4xx_fwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_gpio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_syscfg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_i2c.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_iref.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_pmu.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_rtc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_sdio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_spi.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_timer.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_usart.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_wwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_misc.h)(0x5F6842F6)
+F (..\Library\Source\gd32f4xx_usart.c)(0x5F7027C3)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections -I ..\CMSIS -I ..\Library\Include -I ..\User -I ..\Peripheral\UART -I ..\Peripheral\SYS -I ..\Peripheral\Timer -I ..\Peripheral\SPI -I ..\Peripheral\EXTI -I ..\Peripheral\I2C -I ..\Navi -I ..\Navi\navi_config -I ..\Navi\navi_core -I ..\Navi\navi_math -I ..\Navi\navi_kalman -I ..\Navi\navi_kalman\kalman15d -I ..\Navi\navi_compensation-ID:\Users\20809\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.4.0\Device\F4XX\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DGD32F405 -DGD32F405 -D__FPU_PRESENT-o .\objects\gd32f4xx_usart.o --omf_browse .\objects\gd32f4xx_usart.crf --depend .\objects\gd32f4xx_usart.d)
+I (..\Library\Include\gd32f4xx_usart.h)(0x5F6842F6)
+I (..\CMSIS\gd32f4xx.h)(0x6AA75243)
+I (..\CMSIS\core_cm4.h)(0x5BF4B8AE)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\CMSIS\core_cmInstr.h)(0x5BF4B8AF)
+I (..\CMSIS\core_cmFunc.h)(0x5BF4B8AE)
+I (..\CMSIS\core_cm4_simd.h)(0x5BF4B8AF)
+I (..\CMSIS\system_gd32f4xx.h)(0x5BF4B8AF)
+I (..\User\gd32f4xx_libopt.h)(0x5F6842F3)
+I (..\Library\Include\gd32f4xx_rcu.h)(0x6AA757B9)
+I (..\Library\Include\gd32f4xx_adc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_can.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_crc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_ctc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dac.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dbg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dci.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dma.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_exti.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_fmc.h)(0x5F913EBD)
+I (..\Library\Include\gd32f4xx_fwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_gpio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_syscfg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_i2c.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_iref.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_pmu.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_rtc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_sdio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_spi.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_timer.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_trng.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_wwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_misc.h)(0x5F6842F6)
+F (..\Library\Source\gd32f4xx_wwdgt.c)(0x5F7027C3)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections -I ..\CMSIS -I ..\Library\Include -I ..\User -I ..\Peripheral\UART -I ..\Peripheral\SYS -I ..\Peripheral\Timer -I ..\Peripheral\SPI -I ..\Peripheral\EXTI -I ..\Peripheral\I2C -I ..\Navi -I ..\Navi\navi_config -I ..\Navi\navi_core -I ..\Navi\navi_math -I ..\Navi\navi_kalman -I ..\Navi\navi_kalman\kalman15d -I ..\Navi\navi_compensation-ID:\Users\20809\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.4.0\Device\F4XX\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DGD32F405 -DGD32F405 -D__FPU_PRESENT-o .\objects\gd32f4xx_wwdgt.o --omf_browse .\objects\gd32f4xx_wwdgt.crf --depend .\objects\gd32f4xx_wwdgt.d)
+I (..\Library\Include\gd32f4xx_wwdgt.h)(0x5F6842F6)
+I (..\CMSIS\gd32f4xx.h)(0x6AA75243)
+I (..\CMSIS\core_cm4.h)(0x5BF4B8AE)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\CMSIS\core_cmInstr.h)(0x5BF4B8AF)
+I (..\CMSIS\core_cmFunc.h)(0x5BF4B8AE)
+I (..\CMSIS\core_cm4_simd.h)(0x5BF4B8AF)
+I (..\CMSIS\system_gd32f4xx.h)(0x5BF4B8AF)
+I (..\User\gd32f4xx_libopt.h)(0x5F6842F3)
+I (..\Library\Include\gd32f4xx_rcu.h)(0x6AA757B9)
+I (..\Library\Include\gd32f4xx_adc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_can.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_crc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_ctc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dac.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dbg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dci.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dma.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_exti.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_fmc.h)(0x5F913EBD)
+I (..\Library\Include\gd32f4xx_fwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_gpio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_syscfg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_i2c.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_iref.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_pmu.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_rtc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_sdio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_spi.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_timer.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_trng.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_usart.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_misc.h)(0x5F6842F6)
+F (..\Library\Include\gd32f4xx_adc.h)(0x5F6842F6)()
+F (..\Library\Include\gd32f4xx_can.h)(0x5F6842F6)()
+F (..\Library\Include\gd32f4xx_crc.h)(0x5F6842F6)()
+F (..\Library\Include\gd32f4xx_ctc.h)(0x5F6842F6)()
+F (..\Library\Include\gd32f4xx_dac.h)(0x5F6842F6)()
+F (..\Library\Include\gd32f4xx_dbg.h)(0x5F6842F6)()
+F (..\Library\Include\gd32f4xx_dci.h)(0x5F6842F6)()
+F (..\Library\Include\gd32f4xx_dma.h)(0x5F6842F6)()
+F (..\Library\Include\gd32f4xx_enet.h)(0x5F6842F6)()
+F (..\Library\Include\gd32f4xx_exmc.h)(0x5F6842F6)()
+F (..\Library\Include\gd32f4xx_exti.h)(0x5F6842F6)()
+F (..\Library\Include\gd32f4xx_fmc.h)(0x5F913EBD)()
+F (..\Library\Include\gd32f4xx_fwdgt.h)(0x5F6842F6)()
+F (..\Library\Include\gd32f4xx_gpio.h)(0x5F6842F6)()
+F (..\Library\Include\gd32f4xx_i2c.h)(0x5F6842F6)()
+F (..\Library\Include\gd32f4xx_ipa.h)(0x5F6842F6)()
+F (..\Library\Include\gd32f4xx_iref.h)(0x5F6842F6)()
+F (..\Library\Include\gd32f4xx_misc.h)(0x5F6842F6)()
+F (..\Library\Include\gd32f4xx_pmu.h)(0x5F6842F6)()
+F (..\Library\Include\gd32f4xx_rcu.h)(0x6AA757B9)()
+F (..\Library\Include\gd32f4xx_rtc.h)(0x5F6842F6)()
+F (..\Library\Include\gd32f4xx_sdio.h)(0x5F6842F6)()
+F (..\Library\Include\gd32f4xx_spi.h)(0x5F6842F6)()
+F (..\Library\Include\gd32f4xx_syscfg.h)(0x5F6842F6)()
+F (..\Library\Include\gd32f4xx_timer.h)(0x5F6842F6)()
+F (..\Library\Include\gd32f4xx_tli.h)(0x5F6842F6)()
+F (..\Library\Include\gd32f4xx_trng.h)(0x5F6842F6)()
+F (..\Library\Include\gd32f4xx_usart.h)(0x5F6842F6)()
+F (..\Library\Include\gd32f4xx_wwdgt.h)(0x5F6842F6)()
+F (..\User\main.c)(0x6AE30FE2)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections -I ..\CMSIS -I ..\Library\Include -I ..\User -I ..\Peripheral\UART -I ..\Peripheral\SYS -I ..\Peripheral\Timer -I ..\Peripheral\SPI -I ..\Peripheral\EXTI -I ..\Peripheral\I2C -I ..\Navi -I ..\Navi\navi_config -I ..\Navi\navi_core -I ..\Navi\navi_math -I ..\Navi\navi_kalman -I ..\Navi\navi_kalman\kalman15d -I ..\Navi\navi_compensation-ID:\Users\20809\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.4.0\Device\F4XX\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DGD32F405 -DGD32F405 -D__FPU_PRESENT-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+I (..\CMSIS\gd32f4xx.h)(0x6AA75243)
+I (..\CMSIS\core_cm4.h)(0x5BF4B8AE)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\CMSIS\core_cmInstr.h)(0x5BF4B8AF)
+I (..\CMSIS\core_cmFunc.h)(0x5BF4B8AE)
+I (..\CMSIS\core_cm4_simd.h)(0x5BF4B8AF)
+I (..\CMSIS\system_gd32f4xx.h)(0x5BF4B8AF)
+I (..\User\gd32f4xx_libopt.h)(0x5F6842F3)
+I (..\Library\Include\gd32f4xx_rcu.h)(0x6AA757B9)
+I (..\Library\Include\gd32f4xx_adc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_can.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_crc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_ctc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dac.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dbg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dci.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dma.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_exti.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_fmc.h)(0x5F913EBD)
+I (..\Library\Include\gd32f4xx_fwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_gpio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_syscfg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_i2c.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_iref.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_pmu.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_rtc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_sdio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_spi.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_timer.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_trng.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_usart.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_wwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_misc.h)(0x5F6842F6)
+I (..\User\systick.h)(0x6AE1596A)
+I (..\Peripheral\Timer\timer.h)(0x6AE1B585)
+I (..\User\ADXL357.h)(0x6AE158E0)
+I (..\User\XV7021.h)(0x6AE158DF)
+I (..\Peripheral\UART\uart.h)(0x6AE159D5)
+I (..\Peripheral\SYS\sys.h)(0x6AE159D6)
+I (..\User\IMU_FRAME.h)(0x6AE158BE)
+I (..\User\version.h)(0x6AE19B06)
+I (..\User\navi_pipeline.h)(0x6AE1C455)
+I (..\User\gnss1_rx.h)(0x6AE1C5C3)
+I (..\Navi\navi_config/navi_constants.h)(0x6AD8617D)
+I (D:\Keil_v5\ARM\ARMCC\include\math.h)(0x5E8E2EB2)
+F (..\User\systick.c)(0x6AE1B4A5)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections -I ..\CMSIS -I ..\Library\Include -I ..\User -I ..\Peripheral\UART -I ..\Peripheral\SYS -I ..\Peripheral\Timer -I ..\Peripheral\SPI -I ..\Peripheral\EXTI -I ..\Peripheral\I2C -I ..\Navi -I ..\Navi\navi_config -I ..\Navi\navi_core -I ..\Navi\navi_math -I ..\Navi\navi_kalman -I ..\Navi\navi_kalman\kalman15d -I ..\Navi\navi_compensation-ID:\Users\20809\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.4.0\Device\F4XX\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DGD32F405 -DGD32F405 -D__FPU_PRESENT-o .\objects\systick.o --omf_browse .\objects\systick.crf --depend .\objects\systick.d)
+I (..\CMSIS\gd32f4xx.h)(0x6AA75243)
+I (..\CMSIS\core_cm4.h)(0x5BF4B8AE)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\CMSIS\core_cmInstr.h)(0x5BF4B8AF)
+I (..\CMSIS\core_cmFunc.h)(0x5BF4B8AE)
+I (..\CMSIS\core_cm4_simd.h)(0x5BF4B8AF)
+I (..\CMSIS\system_gd32f4xx.h)(0x5BF4B8AF)
+I (..\User\gd32f4xx_libopt.h)(0x5F6842F3)
+I (..\Library\Include\gd32f4xx_rcu.h)(0x6AA757B9)
+I (..\Library\Include\gd32f4xx_adc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_can.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_crc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_ctc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dac.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dbg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dci.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dma.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_exti.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_fmc.h)(0x5F913EBD)
+I (..\Library\Include\gd32f4xx_fwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_gpio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_syscfg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_i2c.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_iref.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_pmu.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_rtc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_sdio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_spi.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_timer.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_trng.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_usart.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_wwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_misc.h)(0x5F6842F6)
+I (..\User\systick.h)(0x6AE1596A)
+F (..\User\gd32f4xx_it.c)(0x6AE1B75F)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections -I ..\CMSIS -I ..\Library\Include -I ..\User -I ..\Peripheral\UART -I ..\Peripheral\SYS -I ..\Peripheral\Timer -I ..\Peripheral\SPI -I ..\Peripheral\EXTI -I ..\Peripheral\I2C -I ..\Navi -I ..\Navi\navi_config -I ..\Navi\navi_core -I ..\Navi\navi_math -I ..\Navi\navi_kalman -I ..\Navi\navi_kalman\kalman15d -I ..\Navi\navi_compensation-ID:\Users\20809\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.4.0\Device\F4XX\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DGD32F405 -DGD32F405 -D__FPU_PRESENT-o .\objects\gd32f4xx_it.o --omf_browse .\objects\gd32f4xx_it.crf --depend .\objects\gd32f4xx_it.d)
+I (..\User\gd32f4xx_it.h)(0x6AE1596B)
+I (..\CMSIS\gd32f4xx.h)(0x6AA75243)
+I (..\CMSIS\core_cm4.h)(0x5BF4B8AE)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\CMSIS\core_cmInstr.h)(0x5BF4B8AF)
+I (..\CMSIS\core_cmFunc.h)(0x5BF4B8AE)
+I (..\CMSIS\core_cm4_simd.h)(0x5BF4B8AF)
+I (..\CMSIS\system_gd32f4xx.h)(0x5BF4B8AF)
+I (..\User\gd32f4xx_libopt.h)(0x5F6842F3)
+I (..\Library\Include\gd32f4xx_rcu.h)(0x6AA757B9)
+I (..\Library\Include\gd32f4xx_adc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_can.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_crc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_ctc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dac.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dbg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dci.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dma.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_exti.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_fmc.h)(0x5F913EBD)
+I (..\Library\Include\gd32f4xx_fwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_gpio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_syscfg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_i2c.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_iref.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_pmu.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_rtc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_sdio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_spi.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_timer.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_trng.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_usart.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_wwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_misc.h)(0x5F6842F6)
+I (..\User\main.h)(0x6AE1C3B0)
+I (..\User\systick.h)(0x6AE1596A)
+F (..\User\ADXL357.c)(0x6AD5D362)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections -I ..\CMSIS -I ..\Library\Include -I ..\User -I ..\Peripheral\UART -I ..\Peripheral\SYS -I ..\Peripheral\Timer -I ..\Peripheral\SPI -I ..\Peripheral\EXTI -I ..\Peripheral\I2C -I ..\Navi -I ..\Navi\navi_config -I ..\Navi\navi_core -I ..\Navi\navi_math -I ..\Navi\navi_kalman -I ..\Navi\navi_kalman\kalman15d -I ..\Navi\navi_compensation-ID:\Users\20809\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.4.0\Device\F4XX\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DGD32F405 -DGD32F405 -D__FPU_PRESENT-o .\objects\adxl357.o --omf_browse .\objects\adxl357.crf --depend .\objects\adxl357.d)
+I (..\User\ADXL357.h)(0x6AE158E0)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\CMSIS\gd32f4xx.h)(0x6AA75243)
+I (..\CMSIS\core_cm4.h)(0x5BF4B8AE)
+I (..\CMSIS\core_cmInstr.h)(0x5BF4B8AF)
+I (..\CMSIS\core_cmFunc.h)(0x5BF4B8AE)
+I (..\CMSIS\core_cm4_simd.h)(0x5BF4B8AF)
+I (..\CMSIS\system_gd32f4xx.h)(0x5BF4B8AF)
+I (..\User\gd32f4xx_libopt.h)(0x5F6842F3)
+I (..\Library\Include\gd32f4xx_rcu.h)(0x6AA757B9)
+I (..\Library\Include\gd32f4xx_adc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_can.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_crc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_ctc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dac.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dbg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dci.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dma.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_exti.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_fmc.h)(0x5F913EBD)
+I (..\Library\Include\gd32f4xx_fwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_gpio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_syscfg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_i2c.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_iref.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_pmu.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_rtc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_sdio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_spi.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_timer.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_trng.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_usart.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_wwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_misc.h)(0x5F6842F6)
+I (..\Peripheral\SPI\spi.h)(0x6AE159D5)
+I (..\Peripheral\SYS\sys.h)(0x6AE159D6)
+I (..\User\systick.h)(0x6AE1596A)
+F (..\User\ADXL357.h)(0x6AE158E0)()
+F (..\User\XV7021.c)(0x6ADB02D9)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections -I ..\CMSIS -I ..\Library\Include -I ..\User -I ..\Peripheral\UART -I ..\Peripheral\SYS -I ..\Peripheral\Timer -I ..\Peripheral\SPI -I ..\Peripheral\EXTI -I ..\Peripheral\I2C -I ..\Navi -I ..\Navi\navi_config -I ..\Navi\navi_core -I ..\Navi\navi_math -I ..\Navi\navi_kalman -I ..\Navi\navi_kalman\kalman15d -I ..\Navi\navi_compensation-ID:\Users\20809\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.4.0\Device\F4XX\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DGD32F405 -DGD32F405 -D__FPU_PRESENT-o .\objects\xv7021.o --omf_browse .\objects\xv7021.crf --depend .\objects\xv7021.d)
+I (..\User\XV7021.h)(0x6AE158DF)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\User\systick.h)(0x6AE1596A)
+I (..\Peripheral\SPI\spi.h)(0x6AE159D5)
+I (..\Peripheral\SYS\sys.h)(0x6AE159D6)
+I (..\CMSIS\gd32f4xx.h)(0x6AA75243)
+I (..\CMSIS\core_cm4.h)(0x5BF4B8AE)
+I (..\CMSIS\core_cmInstr.h)(0x5BF4B8AF)
+I (..\CMSIS\core_cmFunc.h)(0x5BF4B8AE)
+I (..\CMSIS\core_cm4_simd.h)(0x5BF4B8AF)
+I (..\CMSIS\system_gd32f4xx.h)(0x5BF4B8AF)
+I (..\User\gd32f4xx_libopt.h)(0x5F6842F3)
+I (..\Library\Include\gd32f4xx_rcu.h)(0x6AA757B9)
+I (..\Library\Include\gd32f4xx_adc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_can.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_crc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_ctc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dac.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dbg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dci.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dma.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_exti.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_fmc.h)(0x5F913EBD)
+I (..\Library\Include\gd32f4xx_fwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_gpio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_syscfg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_i2c.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_iref.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_pmu.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_rtc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_sdio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_spi.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_timer.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_trng.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_usart.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_wwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_misc.h)(0x5F6842F6)
+F (..\User\XV7021.h)(0x6AE158DF)()
+F (..\User\main.h)(0x6AE1C3B0)()
+F (..\User\version.h)(0x6AE19B06)()
+F (..\User\version.c)(0x6ADF3D99)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections -I ..\CMSIS -I ..\Library\Include -I ..\User -I ..\Peripheral\UART -I ..\Peripheral\SYS -I ..\Peripheral\Timer -I ..\Peripheral\SPI -I ..\Peripheral\EXTI -I ..\Peripheral\I2C -I ..\Navi -I ..\Navi\navi_config -I ..\Navi\navi_core -I ..\Navi\navi_math -I ..\Navi\navi_kalman -I ..\Navi\navi_kalman\kalman15d -I ..\Navi\navi_compensation-ID:\Users\20809\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.4.0\Device\F4XX\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DGD32F405 -DGD32F405 -D__FPU_PRESENT-o .\objects\version.o --omf_browse .\objects\version.crf --depend .\objects\version.d)
+I (..\User\version.h)(0x6AE19B06)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E2EB2)
+F (..\User\IMU_FRAME.c)(0x6AE19EDC)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections -I ..\CMSIS -I ..\Library\Include -I ..\User -I ..\Peripheral\UART -I ..\Peripheral\SYS -I ..\Peripheral\Timer -I ..\Peripheral\SPI -I ..\Peripheral\EXTI -I ..\Peripheral\I2C -I ..\Navi -I ..\Navi\navi_config -I ..\Navi\navi_core -I ..\Navi\navi_math -I ..\Navi\navi_kalman -I ..\Navi\navi_kalman\kalman15d -I ..\Navi\navi_compensation-ID:\Users\20809\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.4.0\Device\F4XX\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DGD32F405 -DGD32F405 -D__FPU_PRESENT-o .\objects\imu_frame.o --omf_browse .\objects\imu_frame.crf --depend .\objects\imu_frame.d)
+I (..\User\IMU_FRAME.h)(0x6AE158BE)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (D:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E8E2EB2)
+I (..\Peripheral\UART\uart.h)(0x6AE159D5)
+I (..\Peripheral\SYS\sys.h)(0x6AE159D6)
+I (..\CMSIS\gd32f4xx.h)(0x6AA75243)
+I (..\CMSIS\core_cm4.h)(0x5BF4B8AE)
+I (..\CMSIS\core_cmInstr.h)(0x5BF4B8AF)
+I (..\CMSIS\core_cmFunc.h)(0x5BF4B8AE)
+I (..\CMSIS\core_cm4_simd.h)(0x5BF4B8AF)
+I (..\CMSIS\system_gd32f4xx.h)(0x5BF4B8AF)
+I (..\User\gd32f4xx_libopt.h)(0x5F6842F3)
+I (..\Library\Include\gd32f4xx_rcu.h)(0x6AA757B9)
+I (..\Library\Include\gd32f4xx_adc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_can.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_crc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_ctc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dac.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dbg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dci.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dma.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_exti.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_fmc.h)(0x5F913EBD)
+I (..\Library\Include\gd32f4xx_fwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_gpio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_syscfg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_i2c.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_iref.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_pmu.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_rtc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_sdio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_spi.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_timer.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_trng.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_usart.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_wwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_misc.h)(0x5F6842F6)
+I (..\User\XV7021.h)(0x6AE158DF)
+I (..\User\ADXL357.h)(0x6AE158E0)
+F (..\User\IMU_FRAME.h)(0x6AE158BE)()
+F (..\User\mmc5983ma.c)(0x6ADB02D9)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections -I ..\CMSIS -I ..\Library\Include -I ..\User -I ..\Peripheral\UART -I ..\Peripheral\SYS -I ..\Peripheral\Timer -I ..\Peripheral\SPI -I ..\Peripheral\EXTI -I ..\Peripheral\I2C -I ..\Navi -I ..\Navi\navi_config -I ..\Navi\navi_core -I ..\Navi\navi_math -I ..\Navi\navi_kalman -I ..\Navi\navi_kalman\kalman15d -I ..\Navi\navi_compensation-ID:\Users\20809\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.4.0\Device\F4XX\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DGD32F405 -DGD32F405 -D__FPU_PRESENT-o .\objects\mmc5983ma.o --omf_browse .\objects\mmc5983ma.crf --depend .\objects\mmc5983ma.d)
+I (..\User\mmc5983ma.h)(0x6AE158BE)
+I (..\CMSIS\gd32f4xx.h)(0x6AA75243)
+I (..\CMSIS\core_cm4.h)(0x5BF4B8AE)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\CMSIS\core_cmInstr.h)(0x5BF4B8AF)
+I (..\CMSIS\core_cmFunc.h)(0x5BF4B8AE)
+I (..\CMSIS\core_cm4_simd.h)(0x5BF4B8AF)
+I (..\CMSIS\system_gd32f4xx.h)(0x5BF4B8AF)
+I (..\User\gd32f4xx_libopt.h)(0x5F6842F3)
+I (..\Library\Include\gd32f4xx_rcu.h)(0x6AA757B9)
+I (..\Library\Include\gd32f4xx_adc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_can.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_crc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_ctc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dac.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dbg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dci.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dma.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_exti.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_fmc.h)(0x5F913EBD)
+I (..\Library\Include\gd32f4xx_fwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_gpio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_syscfg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_i2c.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_iref.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_pmu.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_rtc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_sdio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_spi.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_timer.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_trng.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_usart.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_wwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_misc.h)(0x5F6842F6)
+I (D:\Keil_v5\ARM\ARMCC\include\math.h)(0x5E8E2EB2)
+F (..\User\mmc5983ma.h)(0x6AE158BE)()
+F (..\User\navi_pipeline.c)(0x6AE1C6B7)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections -I ..\CMSIS -I ..\Library\Include -I ..\User -I ..\Peripheral\UART -I ..\Peripheral\SYS -I ..\Peripheral\Timer -I ..\Peripheral\SPI -I ..\Peripheral\EXTI -I ..\Peripheral\I2C -I ..\Navi -I ..\Navi\navi_config -I ..\Navi\navi_core -I ..\Navi\navi_math -I ..\Navi\navi_kalman -I ..\Navi\navi_kalman\kalman15d -I ..\Navi\navi_compensation-ID:\Users\20809\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.4.0\Device\F4XX\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DGD32F405 -DGD32F405 -D__FPU_PRESENT-o .\objects\navi_pipeline.o --omf_browse .\objects\navi_pipeline.crf --depend .\objects\navi_pipeline.d)
+I (..\User\navi_pipeline.h)(0x6AE1C455)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\Navi\navi_api.h)(0x6AE159A6)
+I (..\Navi\navi_config/navi_types.h)(0x6AE15EB7)
+I (..\Navi\navi_kalman/kalman15d/Kalman15d_SSMat.h)(0x6AE065BD)
+I (..\Navi\navi_config/navi_constants.h)(0x6AD8617D)
+I (..\Navi\navi_config/GNSS_Infor.h)(0x6AE1A181)
+I (..\Navi\navi_core/navi_coarse_align.h)(0x6ABB06AE)
+I (..\Navi\navi_core/navi_attitude.h)(0x6AB9DAAE)
+I (..\Navi\navi_math/navi_vector.h)(0x6AD18235)
+I (..\Navi\navi_core/navi_ins.h)(0x6AE15F2D)
+I (..\Navi\navi_core/navi_earth.h)(0x6AE15F2D)
+I (..\Navi\navi_kalman/kalman15d/kalman15d.h)(0x6AE15EB7)
+I (..\Navi\navi_compensation/navi_error_comp.h)(0x6AE19F36)
+I (..\User\gnss1_rx.h)(0x6AE1C5C3)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E8E2EB2)
+I (D:\Keil_v5\ARM\ARMCC\include\math.h)(0x5E8E2EB2)
+F (..\User\navi_pipeline.h)(0x6AE1C455)()
+F (..\User\gnss1_rx.c)(0x6AE1C56E)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections -I ..\CMSIS -I ..\Library\Include -I ..\User -I ..\Peripheral\UART -I ..\Peripheral\SYS -I ..\Peripheral\Timer -I ..\Peripheral\SPI -I ..\Peripheral\EXTI -I ..\Peripheral\I2C -I ..\Navi -I ..\Navi\navi_config -I ..\Navi\navi_core -I ..\Navi\navi_math -I ..\Navi\navi_kalman -I ..\Navi\navi_kalman\kalman15d -I ..\Navi\navi_compensation-ID:\Users\20809\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.4.0\Device\F4XX\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DGD32F405 -DGD32F405 -D__FPU_PRESENT-o .\objects\gnss1_rx.o --omf_browse .\objects\gnss1_rx.crf --depend .\objects\gnss1_rx.d)
+I (..\User\gnss1_rx.h)(0x6AE1C5C3)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\Peripheral\UART\uart.h)(0x6AE159D5)
+I (..\Peripheral\SYS\sys.h)(0x6AE159D6)
+I (..\CMSIS\gd32f4xx.h)(0x6AA75243)
+I (..\CMSIS\core_cm4.h)(0x5BF4B8AE)
+I (..\CMSIS\core_cmInstr.h)(0x5BF4B8AF)
+I (..\CMSIS\core_cmFunc.h)(0x5BF4B8AE)
+I (..\CMSIS\core_cm4_simd.h)(0x5BF4B8AF)
+I (..\CMSIS\system_gd32f4xx.h)(0x5BF4B8AF)
+I (..\User\gd32f4xx_libopt.h)(0x5F6842F3)
+I (..\Library\Include\gd32f4xx_rcu.h)(0x6AA757B9)
+I (..\Library\Include\gd32f4xx_adc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_can.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_crc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_ctc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dac.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dbg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dci.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dma.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_exti.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_fmc.h)(0x5F913EBD)
+I (..\Library\Include\gd32f4xx_fwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_gpio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_syscfg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_i2c.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_iref.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_pmu.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_rtc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_sdio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_spi.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_timer.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_trng.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_usart.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_wwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_misc.h)(0x5F6842F6)
+I (..\Navi\navi_config/navi_constants.h)(0x6AD8617D)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E8E2EB2)
+F (..\User\gnss1_rx.h)(0x6AE1C5C3)()
+F (..\Navi\navi_api.c)(0x6AE1C6E3)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections -I ..\CMSIS -I ..\Library\Include -I ..\User -I ..\Peripheral\UART -I ..\Peripheral\SYS -I ..\Peripheral\Timer -I ..\Peripheral\SPI -I ..\Peripheral\EXTI -I ..\Peripheral\I2C -I ..\Navi -I ..\Navi\navi_config -I ..\Navi\navi_core -I ..\Navi\navi_math -I ..\Navi\navi_kalman -I ..\Navi\navi_kalman\kalman15d -I ..\Navi\navi_compensation-ID:\Users\20809\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.4.0\Device\F4XX\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DGD32F405 -DGD32F405 -D__FPU_PRESENT-o .\objects\navi_api.o --omf_browse .\objects\navi_api.crf --depend .\objects\navi_api.d)
+I (..\Navi\navi_api.h)(0x6AE159A6)
+I (..\Navi\navi_config/navi_types.h)(0x6AE15EB7)
+I (..\Navi\navi_kalman/kalman15d/Kalman15d_SSMat.h)(0x6AE065BD)
+I (..\Navi\navi_config/navi_constants.h)(0x6AD8617D)
+I (..\Navi\navi_math/navi_vector.h)(0x6AD18235)
+I (..\Navi\navi_core/navi_earth.h)(0x6AE15F2D)
+I (..\Navi\navi_compensation/navi_error_comp.h)(0x6AE19F36)
+I (..\Navi\navi_core/navi_coarse_align.h)(0x6ABB06AE)
+I (..\Navi\navi_kalman/navi_kalman7d.h)(0x6AE15F2D)
+I (..\Navi\navi_kalman/navi_kalman19d.h)(0x6AE15F2D)
+I (..\Navi\navi_kalman/kalman15d/kalman15d.h)(0x6AE15EB7)
+I (..\Navi\navi_config/GNSS_Infor.h)(0x6AE1A181)
+F (..\Navi\navi_api.h)(0x6AE159A6)()
+F (..\Navi\constants.h)(0x6AD88699)()
+F (..\Navi\navi_config\navi_types.h)(0x6AE15EB7)()
+F (..\Navi\navi_config\navi_constants.h)(0x6AD8617D)()
+F (..\Navi\navi_config\navi_filter_params.h)(0x6AE0124C)()
+F (..\Navi\navi_config\GNSS_Infor.h)(0x6AE1A181)()
+F (..\Navi\navi_core\navi_ins.c)(0x6ADB0F44)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections -I ..\CMSIS -I ..\Library\Include -I ..\User -I ..\Peripheral\UART -I ..\Peripheral\SYS -I ..\Peripheral\Timer -I ..\Peripheral\SPI -I ..\Peripheral\EXTI -I ..\Peripheral\I2C -I ..\Navi -I ..\Navi\navi_config -I ..\Navi\navi_core -I ..\Navi\navi_math -I ..\Navi\navi_kalman -I ..\Navi\navi_kalman\kalman15d -I ..\Navi\navi_compensation-ID:\Users\20809\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.4.0\Device\F4XX\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DGD32F405 -DGD32F405 -D__FPU_PRESENT-o .\objects\navi_ins.o --omf_browse .\objects\navi_ins.crf --depend .\objects\navi_ins.d)
+I (..\Navi\navi_core\navi_ins.h)(0x6AE15F2D)
+I (..\Navi\navi_config/navi_types.h)(0x6AE15EB7)
+I (..\Navi\navi_config/navi_constants.h)(0x6AD8617D)
+I (..\Navi\navi_math/navi_matrix.h)(0x6AE15F2D)
+I (..\Navi\navi_math/navi_vector.h)(0x6AD18235)
+I (..\Navi\navi_core\navi_attitude.h)(0x6AB9DAAE)
+I (..\Navi\navi_core\navi_earth.h)(0x6AE15F2D)
+I (..\Navi\navi_compensation/navi_leverarm.h)(0x6AE15F2D)
+I (D:\Keil_v5\ARM\ARMCC\include\math.h)(0x5E8E2EB2)
+F (..\Navi\navi_core\navi_ins.h)(0x6AE15F2D)()
+F (..\Navi\navi_core\navi_earth.c)(0x6ADAAE9B)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections -I ..\CMSIS -I ..\Library\Include -I ..\User -I ..\Peripheral\UART -I ..\Peripheral\SYS -I ..\Peripheral\Timer -I ..\Peripheral\SPI -I ..\Peripheral\EXTI -I ..\Peripheral\I2C -I ..\Navi -I ..\Navi\navi_config -I ..\Navi\navi_core -I ..\Navi\navi_math -I ..\Navi\navi_kalman -I ..\Navi\navi_kalman\kalman15d -I ..\Navi\navi_compensation-ID:\Users\20809\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.4.0\Device\F4XX\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DGD32F405 -DGD32F405 -D__FPU_PRESENT-o .\objects\navi_earth.o --omf_browse .\objects\navi_earth.crf --depend .\objects\navi_earth.d)
+I (..\Navi\navi_core\navi_earth.h)(0x6AE15F2D)
+I (..\Navi\navi_config/navi_types.h)(0x6AE15EB7)
+I (..\Navi\navi_config/navi_constants.h)(0x6AD8617D)
+I (..\Navi\navi_math/navi_vector.h)(0x6AD18235)
+I (..\Navi\navi_math/navi_matrix.h)(0x6AE15F2D)
+I (D:\Keil_v5\ARM\ARMCC\include\math.h)(0x5E8E2EB2)
+F (..\Navi\navi_core\navi_earth.h)(0x6AE15F2D)()
+F (..\Navi\navi_core\navi_attitude.c)(0x6ADAAE9B)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections -I ..\CMSIS -I ..\Library\Include -I ..\User -I ..\Peripheral\UART -I ..\Peripheral\SYS -I ..\Peripheral\Timer -I ..\Peripheral\SPI -I ..\Peripheral\EXTI -I ..\Peripheral\I2C -I ..\Navi -I ..\Navi\navi_config -I ..\Navi\navi_core -I ..\Navi\navi_math -I ..\Navi\navi_kalman -I ..\Navi\navi_kalman\kalman15d -I ..\Navi\navi_compensation-ID:\Users\20809\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.4.0\Device\F4XX\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DGD32F405 -DGD32F405 -D__FPU_PRESENT-o .\objects\navi_attitude.o --omf_browse .\objects\navi_attitude.crf --depend .\objects\navi_attitude.d)
+I (..\Navi\navi_core\navi_attitude.h)(0x6AB9DAAE)
+I (..\Navi\navi_math/navi_vector.h)(0x6AD18235)
+I (..\Navi\navi_math/navi_matrix.h)(0x6AE15F2D)
+I (D:\Keil_v5\ARM\ARMCC\include\math.h)(0x5E8E2EB2)
+F (..\Navi\navi_core\navi_attitude.h)(0x6AB9DAAE)()
+F (..\Navi\navi_core\navi_ahrs.c)(0x6AD88235)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections -I ..\CMSIS -I ..\Library\Include -I ..\User -I ..\Peripheral\UART -I ..\Peripheral\SYS -I ..\Peripheral\Timer -I ..\Peripheral\SPI -I ..\Peripheral\EXTI -I ..\Peripheral\I2C -I ..\Navi -I ..\Navi\navi_config -I ..\Navi\navi_core -I ..\Navi\navi_math -I ..\Navi\navi_kalman -I ..\Navi\navi_kalman\kalman15d -I ..\Navi\navi_compensation-ID:\Users\20809\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.4.0\Device\F4XX\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DGD32F405 -DGD32F405 -D__FPU_PRESENT-o .\objects\navi_ahrs.o --omf_browse .\objects\navi_ahrs.crf --depend .\objects\navi_ahrs.d)
+I (..\Navi\navi_core\navi_ahrs.h)(0x6AE15F2D)
+I (..\Navi\navi_config/navi_types.h)(0x6AE15EB7)
+I (..\Navi\navi_config/navi_constants.h)(0x6AD8617D)
+I (..\Navi\navi_math/navi_matrix.h)(0x6AE15F2D)
+I (..\Navi\navi_core\navi_attitude.h)(0x6AB9DAAE)
+I (..\Navi\navi_core\navi_coarse_align.h)(0x6ABB06AE)
+I (D:\Keil_v5\ARM\ARMCC\include\math.h)(0x5E8E2EB2)
+F (..\Navi\navi_core\navi_ahrs.h)(0x6AE15F2D)()
+F (..\Navi\navi_core\navi_coarse_align.c)(0x6AE151BB)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections -I ..\CMSIS -I ..\Library\Include -I ..\User -I ..\Peripheral\UART -I ..\Peripheral\SYS -I ..\Peripheral\Timer -I ..\Peripheral\SPI -I ..\Peripheral\EXTI -I ..\Peripheral\I2C -I ..\Navi -I ..\Navi\navi_config -I ..\Navi\navi_core -I ..\Navi\navi_math -I ..\Navi\navi_kalman -I ..\Navi\navi_kalman\kalman15d -I ..\Navi\navi_compensation-ID:\Users\20809\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.4.0\Device\F4XX\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DGD32F405 -DGD32F405 -D__FPU_PRESENT-o .\objects\navi_coarse_align.o --omf_browse .\objects\navi_coarse_align.crf --depend .\objects\navi_coarse_align.d)
+I (..\Navi\navi_core\navi_coarse_align.h)(0x6ABB06AE)
+I (..\Navi\navi_config/navi_types.h)(0x6AE15EB7)
+I (..\Navi\navi_config/navi_constants.h)(0x6AD8617D)
+I (..\Navi\navi_math/navi_matrix.h)(0x6AE15F2D)
+I (..\Navi\navi_math/navi_vector.h)(0x6AD18235)
+I (..\Navi\navi_core\navi_attitude.h)(0x6AB9DAAE)
+I (..\Navi\navi_core\navi_ins.h)(0x6AE15F2D)
+I (D:\Keil_v5\ARM\ARMCC\include\math.h)(0x5E8E2EB2)
+F (..\Navi\navi_core\navi_coarse_align.h)(0x6ABB06AE)()
+F (..\Navi\navi_math\navi_vector.c)(0x6ADAAE9B)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections -I ..\CMSIS -I ..\Library\Include -I ..\User -I ..\Peripheral\UART -I ..\Peripheral\SYS -I ..\Peripheral\Timer -I ..\Peripheral\SPI -I ..\Peripheral\EXTI -I ..\Peripheral\I2C -I ..\Navi -I ..\Navi\navi_config -I ..\Navi\navi_core -I ..\Navi\navi_math -I ..\Navi\navi_kalman -I ..\Navi\navi_kalman\kalman15d -I ..\Navi\navi_compensation-ID:\Users\20809\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.4.0\Device\F4XX\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DGD32F405 -DGD32F405 -D__FPU_PRESENT-o .\objects\navi_vector.o --omf_browse .\objects\navi_vector.crf --depend .\objects\navi_vector.d)
+I (..\Navi\navi_math/navi_vector.h)(0x6AD18235)
+I (..\Navi\navi_math/navi_matrix.h)(0x6AE15F2D)
+I (D:\Keil_v5\ARM\ARMCC\include\math.h)(0x5E8E2EB2)
+F (..\Navi\navi_math\navi_vector.h)(0x6AD18235)()
+F (..\Navi\navi_math\navi_matrix.c)(0x6AE07201)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections -I ..\CMSIS -I ..\Library\Include -I ..\User -I ..\Peripheral\UART -I ..\Peripheral\SYS -I ..\Peripheral\Timer -I ..\Peripheral\SPI -I ..\Peripheral\EXTI -I ..\Peripheral\I2C -I ..\Navi -I ..\Navi\navi_config -I ..\Navi\navi_core -I ..\Navi\navi_math -I ..\Navi\navi_kalman -I ..\Navi\navi_kalman\kalman15d -I ..\Navi\navi_compensation-ID:\Users\20809\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.4.0\Device\F4XX\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DGD32F405 -DGD32F405 -D__FPU_PRESENT-o .\objects\navi_matrix.o --omf_browse .\objects\navi_matrix.crf --depend .\objects\navi_matrix.d)
+I (..\Navi\navi_math/navi_matrix.h)(0x6AE15F2D)
+I (D:\Keil_v5\ARM\ARMCC\include\math.h)(0x5E8E2EB2)
+F (..\Navi\navi_math\navi_matrix.h)(0x6AE15F2D)()
+F (..\Navi\navi_math\mat_inverse.c)(0x6AE16ACB)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections -I ..\CMSIS -I ..\Library\Include -I ..\User -I ..\Peripheral\UART -I ..\Peripheral\SYS -I ..\Peripheral\Timer -I ..\Peripheral\SPI -I ..\Peripheral\EXTI -I ..\Peripheral\I2C -I ..\Navi -I ..\Navi\navi_config -I ..\Navi\navi_core -I ..\Navi\navi_math -I ..\Navi\navi_kalman -I ..\Navi\navi_kalman\kalman15d -I ..\Navi\navi_compensation-ID:\Users\20809\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.4.0\Device\F4XX\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DGD32F405 -DGD32F405 -D__FPU_PRESENT-o .\objects\mat_inverse.o --omf_browse .\objects\mat_inverse.crf --depend .\objects\mat_inverse.d)
+I (D:\Keil_v5\ARM\ARMCC\include\math.h)(0x5E8E2EB2)
+F (..\Navi\navi_math\math_matrix.h)(0x6AE16AD5)()
+F (..\Navi\navi_kalman\navi_kalman7d.c)(0x6AD9BC36)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections -I ..\CMSIS -I ..\Library\Include -I ..\User -I ..\Peripheral\UART -I ..\Peripheral\SYS -I ..\Peripheral\Timer -I ..\Peripheral\SPI -I ..\Peripheral\EXTI -I ..\Peripheral\I2C -I ..\Navi -I ..\Navi\navi_config -I ..\Navi\navi_core -I ..\Navi\navi_math -I ..\Navi\navi_kalman -I ..\Navi\navi_kalman\kalman15d -I ..\Navi\navi_compensation-ID:\Users\20809\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.4.0\Device\F4XX\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DGD32F405 -DGD32F405 -D__FPU_PRESENT-o .\objects\navi_kalman7d.o --omf_browse .\objects\navi_kalman7d.crf --depend .\objects\navi_kalman7d.d)
+I (..\Navi\navi_kalman\navi_kalman7d.h)(0x6AE15F2D)
+I (..\Navi\navi_config/navi_types.h)(0x6AE15EB7)
+I (..\Navi\navi_config/navi_constants.h)(0x6AD8617D)
+I (..\Navi\navi_math/navi_matrix.h)(0x6AE15F2D)
+I (..\Navi\navi_math/navi_vector.h)(0x6AD18235)
+I (..\Navi\navi_core/navi_attitude.h)(0x6AB9DAAE)
+I (..\Navi\navi_core/navi_ins.h)(0x6AE15F2D)
+I (D:\Keil_v5\ARM\ARMCC\include\math.h)(0x5E8E2EB2)
+F (..\Navi\navi_kalman\navi_kalman7d.h)(0x6AE15F2D)()
+F (..\Navi\navi_kalman\navi_kalman12d.c)(0x6AD9BC36)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections -I ..\CMSIS -I ..\Library\Include -I ..\User -I ..\Peripheral\UART -I ..\Peripheral\SYS -I ..\Peripheral\Timer -I ..\Peripheral\SPI -I ..\Peripheral\EXTI -I ..\Peripheral\I2C -I ..\Navi -I ..\Navi\navi_config -I ..\Navi\navi_core -I ..\Navi\navi_math -I ..\Navi\navi_kalman -I ..\Navi\navi_kalman\kalman15d -I ..\Navi\navi_compensation-ID:\Users\20809\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.4.0\Device\F4XX\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DGD32F405 -DGD32F405 -D__FPU_PRESENT-o .\objects\navi_kalman12d.o --omf_browse .\objects\navi_kalman12d.crf --depend .\objects\navi_kalman12d.d)
+I (..\Navi\navi_kalman\navi_kalman12d.h)(0x6AE15F2D)
+I (..\Navi\navi_config/navi_types.h)(0x6AE15EB7)
+I (..\Navi\navi_config/navi_constants.h)(0x6AD8617D)
+I (..\Navi\navi_math/navi_matrix.h)(0x6AE15F2D)
+I (..\Navi\navi_math/navi_vector.h)(0x6AD18235)
+I (..\Navi\navi_core/navi_attitude.h)(0x6AB9DAAE)
+I (..\Navi\navi_core/navi_earth.h)(0x6AE15F2D)
+I (..\Navi\navi_core/navi_ins.h)(0x6AE15F2D)
+I (D:\Keil_v5\ARM\ARMCC\include\math.h)(0x5E8E2EB2)
+F (..\Navi\navi_kalman\navi_kalman12d.h)(0x6AE15F2D)()
+F (..\Navi\navi_kalman\navi_kalman19d.c)(0x6AD9BC36)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections -I ..\CMSIS -I ..\Library\Include -I ..\User -I ..\Peripheral\UART -I ..\Peripheral\SYS -I ..\Peripheral\Timer -I ..\Peripheral\SPI -I ..\Peripheral\EXTI -I ..\Peripheral\I2C -I ..\Navi -I ..\Navi\navi_config -I ..\Navi\navi_core -I ..\Navi\navi_math -I ..\Navi\navi_kalman -I ..\Navi\navi_kalman\kalman15d -I ..\Navi\navi_compensation-ID:\Users\20809\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.4.0\Device\F4XX\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DGD32F405 -DGD32F405 -D__FPU_PRESENT-o .\objects\navi_kalman19d.o --omf_browse .\objects\navi_kalman19d.crf --depend .\objects\navi_kalman19d.d)
+I (..\Navi\navi_kalman\navi_kalman19d.h)(0x6AE15F2D)
+I (..\Navi\navi_config/navi_types.h)(0x6AE15EB7)
+I (..\Navi\navi_config/navi_constants.h)(0x6AD8617D)
+I (..\Navi\navi_math/navi_matrix.h)(0x6AE15F2D)
+I (..\Navi\navi_math/navi_vector.h)(0x6AD18235)
+I (..\Navi\navi_core/navi_ins.h)(0x6AE15F2D)
+I (..\Navi\navi_compensation/navi_leverarm.h)(0x6AE15F2D)
+I (..\Navi\navi_compensation/navi_time_sync.h)(0x6AE15F2D)
+I (D:\Keil_v5\ARM\ARMCC\include\math.h)(0x5E8E2EB2)
+F (..\Navi\navi_kalman\navi_kalman19d.h)(0x6AE15F2D)()
+F (..\Navi\navi_kalman\kalman15d\Kalman15d_Init.c)(0x6AE15BDC)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections -I ..\CMSIS -I ..\Library\Include -I ..\User -I ..\Peripheral\UART -I ..\Peripheral\SYS -I ..\Peripheral\Timer -I ..\Peripheral\SPI -I ..\Peripheral\EXTI -I ..\Peripheral\I2C -I ..\Navi -I ..\Navi\navi_config -I ..\Navi\navi_core -I ..\Navi\navi_math -I ..\Navi\navi_kalman -I ..\Navi\navi_kalman\kalman15d -I ..\Navi\navi_compensation-ID:\Users\20809\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.4.0\Device\F4XX\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DGD32F405 -DGD32F405 -D__FPU_PRESENT-o .\objects\kalman15d_init.o --omf_browse .\objects\kalman15d_init.crf --depend .\objects\kalman15d_init.d)
+I (D:\Keil_v5\ARM\ARMCC\include\math.h)(0x5E8E2EB2)
+I (..\Navi\navi_config/navi_types.h)(0x6AE15EB7)
+I (..\Navi\navi_config/navi_constants.h)(0x6AD8617D)
+I (..\Navi\navi_config/navi_filter_params.h)(0x6AE0124C)
+I (..\Navi\navi_kalman\kalman15d\Kalman15d_SSMat.h)(0x6AE065BD)
+F (..\Navi\navi_kalman\kalman15d\Kalman15d_TimeUpdate.c)(0x6AE15BDC)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections -I ..\CMSIS -I ..\Library\Include -I ..\User -I ..\Peripheral\UART -I ..\Peripheral\SYS -I ..\Peripheral\Timer -I ..\Peripheral\SPI -I ..\Peripheral\EXTI -I ..\Peripheral\I2C -I ..\Navi -I ..\Navi\navi_config -I ..\Navi\navi_core -I ..\Navi\navi_math -I ..\Navi\navi_kalman -I ..\Navi\navi_kalman\kalman15d -I ..\Navi\navi_compensation-ID:\Users\20809\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.4.0\Device\F4XX\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DGD32F405 -DGD32F405 -D__FPU_PRESENT-o .\objects\kalman15d_timeupdate.o --omf_browse .\objects\kalman15d_timeupdate.crf --depend .\objects\kalman15d_timeupdate.d)
+I (D:\Keil_v5\ARM\ARMCC\include\math.h)(0x5E8E2EB2)
+I (..\Navi\navi_config/navi_constants.h)(0x6AD8617D)
+I (..\Navi\navi_config/navi_filter_params.h)(0x6AE0124C)
+I (..\Navi\navi_math/math_matrix.h)(0x6AE16AD5)
+I (..\Navi\navi_config/navi_types.h)(0x6AE15EB7)
+I (..\Navi\navi_kalman\kalman15d\Kalman15d_SSMat.h)(0x6AE065BD)
+F (..\Navi\navi_kalman\kalman15d\Kalman15d_MeaUpdate.c)(0x6AE16B1C)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections -I ..\CMSIS -I ..\Library\Include -I ..\User -I ..\Peripheral\UART -I ..\Peripheral\SYS -I ..\Peripheral\Timer -I ..\Peripheral\SPI -I ..\Peripheral\EXTI -I ..\Peripheral\I2C -I ..\Navi -I ..\Navi\navi_config -I ..\Navi\navi_core -I ..\Navi\navi_math -I ..\Navi\navi_kalman -I ..\Navi\navi_kalman\kalman15d -I ..\Navi\navi_compensation-ID:\Users\20809\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.4.0\Device\F4XX\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DGD32F405 -DGD32F405 -D__FPU_PRESENT-o .\objects\kalman15d_meaupdate.o --omf_browse .\objects\kalman15d_meaupdate.crf --depend .\objects\kalman15d_meaupdate.d)
+I (D:\Keil_v5\ARM\ARMCC\include\math.h)(0x5E8E2EB2)
+I (..\Navi\navi_config/navi_constants.h)(0x6AD8617D)
+I (..\Navi\navi_config/navi_filter_params.h)(0x6AE0124C)
+I (..\Navi\navi_math/math_matrix.h)(0x6AE16AD5)
+I (..\Navi\navi_kalman\kalman15d\Kalman15d_SSMat.h)(0x6AE065BD)
+I (..\Navi\navi_config/GNSS_Infor.h)(0x6AE1A181)
+I (..\Navi\navi_config/navi_types.h)(0x6AE15EB7)
+F (..\Navi\navi_kalman\kalman15d\Kalman_FeedBack.c)(0x6AE019A3)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections -I ..\CMSIS -I ..\Library\Include -I ..\User -I ..\Peripheral\UART -I ..\Peripheral\SYS -I ..\Peripheral\Timer -I ..\Peripheral\SPI -I ..\Peripheral\EXTI -I ..\Peripheral\I2C -I ..\Navi -I ..\Navi\navi_config -I ..\Navi\navi_core -I ..\Navi\navi_math -I ..\Navi\navi_kalman -I ..\Navi\navi_kalman\kalman15d -I ..\Navi\navi_compensation-ID:\Users\20809\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.4.0\Device\F4XX\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DGD32F405 -DGD32F405 -D__FPU_PRESENT-o .\objects\kalman_feedback.o --omf_browse .\objects\kalman_feedback.crf --depend .\objects\kalman_feedback.d)
+I (..\Navi\navi_config/navi_types.h)(0x6AE15EB7)
+I (D:\Keil_v5\ARM\ARMCC\include\math.h)(0x5E8E2EB2)
+I (..\Navi\navi_config/navi_constants.h)(0x6AD8617D)
+I (..\Navi\navi_config/navi_filter_params.h)(0x6AE0124C)
+I (..\Navi\navi_math/math_matrix.h)(0x6AE16AD5)
+I (..\Navi\navi_kalman\kalman15d\Kalman15d_SSMat.h)(0x6AE065BD)
+F (..\Navi\navi_kalman\kalman15d\GetKalman15d_SSMat.c)(0x6AE15BDC)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections -I ..\CMSIS -I ..\Library\Include -I ..\User -I ..\Peripheral\UART -I ..\Peripheral\SYS -I ..\Peripheral\Timer -I ..\Peripheral\SPI -I ..\Peripheral\EXTI -I ..\Peripheral\I2C -I ..\Navi -I ..\Navi\navi_config -I ..\Navi\navi_core -I ..\Navi\navi_math -I ..\Navi\navi_kalman -I ..\Navi\navi_kalman\kalman15d -I ..\Navi\navi_compensation-ID:\Users\20809\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.4.0\Device\F4XX\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DGD32F405 -DGD32F405 -D__FPU_PRESENT-o .\objects\getkalman15d_ssmat.o --omf_browse .\objects\getkalman15d_ssmat.crf --depend .\objects\getkalman15d_ssmat.d)
+I (..\Navi\navi_config/navi_types.h)(0x6AE15EB7)
+I (D:\Keil_v5\ARM\ARMCC\include\math.h)(0x5E8E2EB2)
+I (..\Navi\navi_config/navi_constants.h)(0x6AD8617D)
+I (..\Navi\navi_config/navi_filter_params.h)(0x6AE0124C)
+I (..\Navi\navi_math/math_matrix.h)(0x6AE16AD5)
+I (..\Navi\navi_kalman\kalman15d\Kalman15d_SSMat.h)(0x6AE065BD)
+F (..\Navi\navi_kalman\kalman15d\kalman15d.h)(0x6AE15EB7)()
+F (..\Navi\navi_kalman\kalman15d\Kalman15d_SSMat.h)(0x6AE065BD)()
+F (..\Navi\navi_compensation\navi_error_comp.c)(0x6AE167E6)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections -I ..\CMSIS -I ..\Library\Include -I ..\User -I ..\Peripheral\UART -I ..\Peripheral\SYS -I ..\Peripheral\Timer -I ..\Peripheral\SPI -I ..\Peripheral\EXTI -I ..\Peripheral\I2C -I ..\Navi -I ..\Navi\navi_config -I ..\Navi\navi_core -I ..\Navi\navi_math -I ..\Navi\navi_kalman -I ..\Navi\navi_kalman\kalman15d -I ..\Navi\navi_compensation-ID:\Users\20809\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.4.0\Device\F4XX\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DGD32F405 -DGD32F405 -D__FPU_PRESENT-o .\objects\navi_error_comp.o --omf_browse .\objects\navi_error_comp.crf --depend .\objects\navi_error_comp.d)
+I (..\Navi\navi_compensation\navi_error_comp.h)(0x6AE19F36)
+I (..\Navi\navi_config/navi_types.h)(0x6AE15EB7)
+I (..\Navi\navi_config/navi_constants.h)(0x6AD8617D)
+I (..\Navi\navi_math/navi_matrix.h)(0x6AE15F2D)
+I (..\Navi\navi_math/navi_vector.h)(0x6AD18235)
+I (D:\Keil_v5\ARM\ARMCC\include\math.h)(0x5E8E2EB2)
+F (..\Navi\navi_compensation\navi_error_comp.h)(0x6AE19F36)()
+F (..\Navi\navi_compensation\navi_leverarm.c)(0x6AD9BCDF)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections -I ..\CMSIS -I ..\Library\Include -I ..\User -I ..\Peripheral\UART -I ..\Peripheral\SYS -I ..\Peripheral\Timer -I ..\Peripheral\SPI -I ..\Peripheral\EXTI -I ..\Peripheral\I2C -I ..\Navi -I ..\Navi\navi_config -I ..\Navi\navi_core -I ..\Navi\navi_math -I ..\Navi\navi_kalman -I ..\Navi\navi_kalman\kalman15d -I ..\Navi\navi_compensation-ID:\Users\20809\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.4.0\Device\F4XX\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DGD32F405 -DGD32F405 -D__FPU_PRESENT-o .\objects\navi_leverarm.o --omf_browse .\objects\navi_leverarm.crf --depend .\objects\navi_leverarm.d)
+I (..\Navi\navi_compensation\navi_leverarm.h)(0x6AE15F2D)
+I (..\Navi\navi_config/navi_types.h)(0x6AE15EB7)
+I (..\Navi\navi_config/navi_constants.h)(0x6AD8617D)
+I (..\Navi\navi_math/navi_matrix.h)(0x6AE15F2D)
+I (..\Navi\navi_math/navi_vector.h)(0x6AD18235)
+I (D:\Keil_v5\ARM\ARMCC\include\math.h)(0x5E8E2EB2)
+F (..\Navi\navi_compensation\navi_leverarm.h)(0x6AE15F2D)()
+F (..\Navi\navi_compensation\navi_time_sync.c)(0x6AE15FF3)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections -I ..\CMSIS -I ..\Library\Include -I ..\User -I ..\Peripheral\UART -I ..\Peripheral\SYS -I ..\Peripheral\Timer -I ..\Peripheral\SPI -I ..\Peripheral\EXTI -I ..\Peripheral\I2C -I ..\Navi -I ..\Navi\navi_config -I ..\Navi\navi_core -I ..\Navi\navi_math -I ..\Navi\navi_kalman -I ..\Navi\navi_kalman\kalman15d -I ..\Navi\navi_compensation-ID:\Users\20809\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.4.0\Device\F4XX\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DGD32F405 -DGD32F405 -D__FPU_PRESENT-o .\objects\navi_time_sync.o --omf_browse .\objects\navi_time_sync.crf --depend .\objects\navi_time_sync.d)
+I (..\Navi\navi_compensation\navi_time_sync.h)(0x6AE15F2D)
+I (..\Navi\navi_config/navi_types.h)(0x6AE15EB7)
+I (..\Navi\navi_config/navi_constants.h)(0x6AD8617D)
+I (..\Navi\navi_math/navi_matrix.h)(0x6AE15F2D)
+I (..\Navi\navi_math/navi_vector.h)(0x6AD18235)
+I (D:\Keil_v5\ARM\ARMCC\include\math.h)(0x5E8E2EB2)
+F (..\Navi\navi_compensation\navi_time_sync.h)(0x6AE15F2D)()
+F (..\Navi\navi_compensation\GetFlag_GNSS_type.c)(0x6AE15EB7)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections -I ..\CMSIS -I ..\Library\Include -I ..\User -I ..\Peripheral\UART -I ..\Peripheral\SYS -I ..\Peripheral\Timer -I ..\Peripheral\SPI -I ..\Peripheral\EXTI -I ..\Peripheral\I2C -I ..\Navi -I ..\Navi\navi_config -I ..\Navi\navi_core -I ..\Navi\navi_math -I ..\Navi\navi_kalman -I ..\Navi\navi_kalman\kalman15d -I ..\Navi\navi_compensation-ID:\Users\20809\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.4.0\Device\F4XX\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DGD32F405 -DGD32F405 -D__FPU_PRESENT-o .\objects\getflag_gnss_type.o --omf_browse .\objects\getflag_gnss_type.crf --depend .\objects\getflag_gnss_type.d)
+I (..\Navi\navi_config/navi_types.h)(0x6AE15EB7)
+I (..\Navi\navi_math/math_matrix.h)(0x6AE16AD5)
+I (..\Navi\navi_config/GNSS_Infor.h)(0x6AE1A181)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E8E2EB2)
+I (..\Navi\navi_config/navi_constants.h)(0x6AD8617D)
+I (..\Navi\navi_config/navi_filter_params.h)(0x6AE0124C)
+F (..\Peripheral\UART\uart.c)(0x6AE1B75F)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections -I ..\CMSIS -I ..\Library\Include -I ..\User -I ..\Peripheral\UART -I ..\Peripheral\SYS -I ..\Peripheral\Timer -I ..\Peripheral\SPI -I ..\Peripheral\EXTI -I ..\Peripheral\I2C -I ..\Navi -I ..\Navi\navi_config -I ..\Navi\navi_core -I ..\Navi\navi_math -I ..\Navi\navi_kalman -I ..\Navi\navi_kalman\kalman15d -I ..\Navi\navi_compensation-ID:\Users\20809\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.4.0\Device\F4XX\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DGD32F405 -DGD32F405 -D__FPU_PRESENT-o .\objects\uart.o --omf_browse .\objects\uart.crf --depend .\objects\uart.d)
+I (..\Peripheral\UART\uart.h)(0x6AE159D5)
+I (..\Peripheral\SYS\sys.h)(0x6AE159D6)
+I (..\CMSIS\gd32f4xx.h)(0x6AA75243)
+I (..\CMSIS\core_cm4.h)(0x5BF4B8AE)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\CMSIS\core_cmInstr.h)(0x5BF4B8AF)
+I (..\CMSIS\core_cmFunc.h)(0x5BF4B8AE)
+I (..\CMSIS\core_cm4_simd.h)(0x5BF4B8AF)
+I (..\CMSIS\system_gd32f4xx.h)(0x5BF4B8AF)
+I (..\User\gd32f4xx_libopt.h)(0x5F6842F3)
+I (..\Library\Include\gd32f4xx_rcu.h)(0x6AA757B9)
+I (..\Library\Include\gd32f4xx_adc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_can.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_crc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_ctc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dac.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dbg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dci.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dma.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_exti.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_fmc.h)(0x5F913EBD)
+I (..\Library\Include\gd32f4xx_fwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_gpio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_syscfg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_i2c.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_iref.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_pmu.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_rtc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_sdio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_spi.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_timer.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_trng.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_usart.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_wwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_misc.h)(0x5F6842F6)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E2EB2)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E8E2EB2)
+F (..\Peripheral\UART\uart.h)(0x6AE159D5)()
+F (..\Peripheral\SYS\sys.c)(0x6AE15EB7)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections -I ..\CMSIS -I ..\Library\Include -I ..\User -I ..\Peripheral\UART -I ..\Peripheral\SYS -I ..\Peripheral\Timer -I ..\Peripheral\SPI -I ..\Peripheral\EXTI -I ..\Peripheral\I2C -I ..\Navi -I ..\Navi\navi_config -I ..\Navi\navi_core -I ..\Navi\navi_math -I ..\Navi\navi_kalman -I ..\Navi\navi_kalman\kalman15d -I ..\Navi\navi_compensation-ID:\Users\20809\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.4.0\Device\F4XX\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DGD32F405 -DGD32F405 -D__FPU_PRESENT-o .\objects\sys.o --omf_browse .\objects\sys.crf --depend .\objects\sys.d)
+I (..\Peripheral\SYS\sys.h)(0x6AE159D6)
+I (..\CMSIS\gd32f4xx.h)(0x6AA75243)
+I (..\CMSIS\core_cm4.h)(0x5BF4B8AE)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\CMSIS\core_cmInstr.h)(0x5BF4B8AF)
+I (..\CMSIS\core_cmFunc.h)(0x5BF4B8AE)
+I (..\CMSIS\core_cm4_simd.h)(0x5BF4B8AF)
+I (..\CMSIS\system_gd32f4xx.h)(0x5BF4B8AF)
+I (..\User\gd32f4xx_libopt.h)(0x5F6842F3)
+I (..\Library\Include\gd32f4xx_rcu.h)(0x6AA757B9)
+I (..\Library\Include\gd32f4xx_adc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_can.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_crc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_ctc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dac.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dbg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dci.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dma.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_exti.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_fmc.h)(0x5F913EBD)
+I (..\Library\Include\gd32f4xx_fwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_gpio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_syscfg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_i2c.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_iref.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_pmu.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_rtc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_sdio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_spi.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_timer.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_trng.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_usart.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_wwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_misc.h)(0x5F6842F6)
+F (..\Peripheral\SYS\sys.h)(0x6AE159D6)()
+F (..\Peripheral\Timer\timer.c)(0x6AE1B57C)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections -I ..\CMSIS -I ..\Library\Include -I ..\User -I ..\Peripheral\UART -I ..\Peripheral\SYS -I ..\Peripheral\Timer -I ..\Peripheral\SPI -I ..\Peripheral\EXTI -I ..\Peripheral\I2C -I ..\Navi -I ..\Navi\navi_config -I ..\Navi\navi_core -I ..\Navi\navi_math -I ..\Navi\navi_kalman -I ..\Navi\navi_kalman\kalman15d -I ..\Navi\navi_compensation-ID:\Users\20809\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.4.0\Device\F4XX\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DGD32F405 -DGD32F405 -D__FPU_PRESENT-o .\objects\timer.o --omf_browse .\objects\timer.crf --depend .\objects\timer.d)
+I (..\Peripheral\Timer\timer.h)(0x6AE1B585)
+I (..\CMSIS\gd32f4xx.h)(0x6AA75243)
+I (..\CMSIS\core_cm4.h)(0x5BF4B8AE)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\CMSIS\core_cmInstr.h)(0x5BF4B8AF)
+I (..\CMSIS\core_cmFunc.h)(0x5BF4B8AE)
+I (..\CMSIS\core_cm4_simd.h)(0x5BF4B8AF)
+I (..\CMSIS\system_gd32f4xx.h)(0x5BF4B8AF)
+I (..\User\gd32f4xx_libopt.h)(0x5F6842F3)
+I (..\Library\Include\gd32f4xx_rcu.h)(0x6AA757B9)
+I (..\Library\Include\gd32f4xx_adc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_can.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_crc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_ctc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dac.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dbg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dci.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dma.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_exti.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_fmc.h)(0x5F913EBD)
+I (..\Library\Include\gd32f4xx_fwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_gpio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_syscfg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_i2c.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_iref.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_pmu.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_rtc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_sdio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_spi.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_timer.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_trng.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_usart.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_wwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_misc.h)(0x5F6842F6)
+F (..\Peripheral\Timer\timer.h)(0x6AE1B585)()
+F (..\Peripheral\SPI\spi.c)(0x6ADF4311)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections -I ..\CMSIS -I ..\Library\Include -I ..\User -I ..\Peripheral\UART -I ..\Peripheral\SYS -I ..\Peripheral\Timer -I ..\Peripheral\SPI -I ..\Peripheral\EXTI -I ..\Peripheral\I2C -I ..\Navi -I ..\Navi\navi_config -I ..\Navi\navi_core -I ..\Navi\navi_math -I ..\Navi\navi_kalman -I ..\Navi\navi_kalman\kalman15d -I ..\Navi\navi_compensation-ID:\Users\20809\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.4.0\Device\F4XX\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DGD32F405 -DGD32F405 -D__FPU_PRESENT-o .\objects\spi.o --omf_browse .\objects\spi.crf --depend .\objects\spi.d)
+I (..\CMSIS\gd32f4xx.h)(0x6AA75243)
+I (..\CMSIS\core_cm4.h)(0x5BF4B8AE)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\CMSIS\core_cmInstr.h)(0x5BF4B8AF)
+I (..\CMSIS\core_cmFunc.h)(0x5BF4B8AE)
+I (..\CMSIS\core_cm4_simd.h)(0x5BF4B8AF)
+I (..\CMSIS\system_gd32f4xx.h)(0x5BF4B8AF)
+I (..\User\gd32f4xx_libopt.h)(0x5F6842F3)
+I (..\Library\Include\gd32f4xx_rcu.h)(0x6AA757B9)
+I (..\Library\Include\gd32f4xx_adc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_can.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_crc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_ctc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dac.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dbg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dci.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dma.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_exti.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_fmc.h)(0x5F913EBD)
+I (..\Library\Include\gd32f4xx_fwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_gpio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_syscfg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_i2c.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_iref.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_pmu.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_rtc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_sdio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_spi.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_timer.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_trng.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_usart.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_wwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_misc.h)(0x5F6842F6)
+I (..\Peripheral\SPI\spi.h)(0x6AE159D5)
+I (..\Peripheral\SYS\sys.h)(0x6AE159D6)
+I (D:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E8E2EB2)
+F (..\Peripheral\SPI\spi.h)(0x6AE159D5)()
+F (..\Peripheral\EXTI\exti.c)(0x6ADB02D8)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections -I ..\CMSIS -I ..\Library\Include -I ..\User -I ..\Peripheral\UART -I ..\Peripheral\SYS -I ..\Peripheral\Timer -I ..\Peripheral\SPI -I ..\Peripheral\EXTI -I ..\Peripheral\I2C -I ..\Navi -I ..\Navi\navi_config -I ..\Navi\navi_core -I ..\Navi\navi_math -I ..\Navi\navi_kalman -I ..\Navi\navi_kalman\kalman15d -I ..\Navi\navi_compensation-ID:\Users\20809\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.4.0\Device\F4XX\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DGD32F405 -DGD32F405 -D__FPU_PRESENT-o .\objects\exti.o --omf_browse .\objects\exti.crf --depend .\objects\exti.d)
+I (..\User\systick.h)(0x6AE1596A)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\Peripheral\EXTI\exti.h)(0x6AE159D7)
+I (..\Peripheral\SYS\sys.h)(0x6AE159D6)
+I (..\CMSIS\gd32f4xx.h)(0x6AA75243)
+I (..\CMSIS\core_cm4.h)(0x5BF4B8AE)
+I (..\CMSIS\core_cmInstr.h)(0x5BF4B8AF)
+I (..\CMSIS\core_cmFunc.h)(0x5BF4B8AE)
+I (..\CMSIS\core_cm4_simd.h)(0x5BF4B8AF)
+I (..\CMSIS\system_gd32f4xx.h)(0x5BF4B8AF)
+I (..\User\gd32f4xx_libopt.h)(0x5F6842F3)
+I (..\Library\Include\gd32f4xx_rcu.h)(0x6AA757B9)
+I (..\Library\Include\gd32f4xx_adc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_can.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_crc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_ctc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dac.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dbg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dci.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dma.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_exti.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_fmc.h)(0x5F913EBD)
+I (..\Library\Include\gd32f4xx_fwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_gpio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_syscfg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_i2c.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_iref.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_pmu.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_rtc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_sdio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_spi.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_timer.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_trng.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_usart.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_wwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_misc.h)(0x5F6842F6)
+F (..\Peripheral\EXTI\exti.h)(0x6AE159D7)()
+F (..\Peripheral\I2C\i2c.c)(0x6ADB02D8)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O3 -Otime --apcs=interwork --split_sections -I ..\CMSIS -I ..\Library\Include -I ..\User -I ..\Peripheral\UART -I ..\Peripheral\SYS -I ..\Peripheral\Timer -I ..\Peripheral\SPI -I ..\Peripheral\EXTI -I ..\Peripheral\I2C -I ..\Navi -I ..\Navi\navi_config -I ..\Navi\navi_core -I ..\Navi\navi_math -I ..\Navi\navi_kalman -I ..\Navi\navi_kalman\kalman15d -I ..\Navi\navi_compensation-ID:\Users\20809\AppData\Local\Arm\Packs\GigaDevice\GD32F4xx_DFP\3.4.0\Device\F4XX\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DGD32F405 -DGD32F405 -D__FPU_PRESENT-o .\objects\i2c.o --omf_browse .\objects\i2c.crf --depend .\objects\i2c.d)
+I (..\Peripheral\I2C\i2c.h)(0x6AE159D7)
+I (..\Peripheral\SYS\sys.h)(0x6AE159D6)
+I (..\CMSIS\gd32f4xx.h)(0x6AA75243)
+I (..\CMSIS\core_cm4.h)(0x5BF4B8AE)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\CMSIS\core_cmInstr.h)(0x5BF4B8AF)
+I (..\CMSIS\core_cmFunc.h)(0x5BF4B8AE)
+I (..\CMSIS\core_cm4_simd.h)(0x5BF4B8AF)
+I (..\CMSIS\system_gd32f4xx.h)(0x5BF4B8AF)
+I (..\User\gd32f4xx_libopt.h)(0x5F6842F3)
+I (..\Library\Include\gd32f4xx_rcu.h)(0x6AA757B9)
+I (..\Library\Include\gd32f4xx_adc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_can.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_crc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_ctc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dac.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dbg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dci.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_dma.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_exti.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_fmc.h)(0x5F913EBD)
+I (..\Library\Include\gd32f4xx_fwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_gpio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_syscfg.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_i2c.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_iref.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_pmu.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_rtc.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_sdio.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_spi.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_timer.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_trng.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_usart.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_wwdgt.h)(0x5F6842F6)
+I (..\Library\Include\gd32f4xx_misc.h)(0x5F6842F6)
+F (..\Peripheral\I2C\i2c.h)(0x6AE159D7)()

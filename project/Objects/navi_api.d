@@ -1,0 +1,13 @@
+.\objects\navi_api.o: ..\Navi\navi_api.c
+.\objects\navi_api.o: ..\Navi\navi_api.h
+.\objects\navi_api.o: ..\Navi\navi_config/navi_types.h
+.\objects\navi_api.o: ..\Navi\navi_kalman/kalman15d/Kalman15d_SSMat.h
+.\objects\navi_api.o: ..\Navi\navi_config/navi_constants.h
+.\objects\navi_api.o: ..\Navi\navi_math/navi_vector.h
+.\objects\navi_api.o: ..\Navi\navi_core/navi_earth.h
+.\objects\navi_api.o: ..\Navi\navi_compensation/navi_error_comp.h
+.\objects\navi_api.o: ..\Navi\navi_core/navi_coarse_align.h
+.\objects\navi_api.o: ..\Navi\navi_kalman/navi_kalman7d.h
+.\objects\navi_api.o: ..\Navi\navi_kalman/navi_kalman19d.h
+.\objects\navi_api.o: ..\Navi\navi_kalman/kalman15d/kalman15d.h
+.\objects\navi_api.o: ..\Navi\navi_config/GNSS_Infor.h
